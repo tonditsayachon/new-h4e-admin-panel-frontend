@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title> H Number</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/hsc-chula-new-logo.png" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- file upload -->
+    <link rel="stylesheet" href="assets/css/file-upload.css">
+    <!-- file upload -->
+    <link rel="stylesheet" href="assets/css/plyr.css">
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
+
+    <!-- jquery Ui -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <!-- editor quill Ui -->
+    <link rel="stylesheet" href="assets/css/editor-quill.css">
+    <!-- flag css -->
+    <link rel="stylesheet" href="assets/css/flag-icons.css">
+
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+
+    <!--==================== Preloader Start ====================-->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!--==================== Preloader End ====================-->
+
+    <!--==================== Sidebar Overlay End ====================-->
+    <div class="side-overlay"></div>
+    <!--==================== Sidebar Overlay End ====================-->
+
+    <!-- ============================ Sidebar Start ============================ -->
+
+    <aside class="sidebar">
+        <!-- sidebar close btn -->
+        <button type="button"
+            class="sidebar-close-btn text-gray-500 hover-text-white hover-bg-main-600 text-md w-24 h-24 border border-gray-100 hover-border-main-600 d-xl-none d-flex flex-center rounded-circle position-absolute"><i
+                class="ph ph-x"></i></button>
+        <!-- sidebar close btn -->
+
+        <a href="index.html" class="sidebar__logo text-center p-16 position-sticky z-1">
+            <img src="assets/images/logo/logo.png" alt="Logo">
+        </a>
+
+        <div class="sidebar-menu-wrapper overflow-y-auto scroll-sm">
+            <div class="p-20 pt-10">
+                <ul class="sidebar-menu">
+
+                    <li class="sidebar-menu__item activePage">
+                        <a href="h-number.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-flask"></i></span>
+                            <span class="text">H Number</span>
+
+                        </a>
+
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="javascript:void(0)" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-building"></i></span>
+                            <span class="text">Distributors</span>
+                        </a>
+
+                    </li>
+
+                    <li class="sidebar-menu__item">
+                        <a href="assignment.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-file-shield"></i></span>
+                            <span class="text">Guarantee</span>
+                        </a>
+                    </li>
+
+
+                    <li class="sidebar-menu__item">
+                        <span
+                            class="text-gray-300 text-sm px-20 pt-20 fw-semibold border-top border-gray-100 d-block text-uppercase">Admin</span>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="setting.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-users"></i></span>
+                            <span class="text">Manage User</span>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+            </div>
+
+        </div>
+
+    </aside>
+    <!-- ============================ Sidebar End  ============================ -->
+
+    <div class="dashboard-main-wrapper">
+      <div class="top-navbar">
+            <div class="flex-align gap-16">
+                <button type="button" class="toggle-btn d-xl-none d-flex text-26 text-gray-500"><i
+                        class="fa-solid fa-bars"></i></button>
+            </div>
+            <!-- Toggle Button Start -->
+            <div class="flex-align gap-16">
+                <div class="dropdown">
+                    <button class="users border border-gray-200 rounded-pill p-4 d-inline-block px-8 position-relative"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="position-relative">
+                            <img src="assets/images/logo/hsc-chula-new-logo.png" alt="Image"
+                                class="h-32 w-32 rounded-circle">
+                            <span
+                                class="activation-badge w-8 h-8 position-absolute inset-block-end-0 inset-inline-end-0"></span>
+                        </span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu--lg border-0 bg-transparent p-0">
+                        <div class="card border border-gray-100 rounded-12 box-shadow-custom">
+                            <div class="card-body">
+                                <div class="flex-align gap-8 mb-20 pb-20 border-bottom border-gray-100">
+                                    <img src="assets/images/logo/hsc-chula-new-logo.png" alt=""
+                                        class="w-54 h-54 rounded-circle">
+                                    <div class="">
+                                        <h4 class="mb-0">Admin</h4>
+                                        <p class="fw-medium text-13 text-gray-200">admin@h4ehalalthai.com</p>
+                                    </div>
+                                </div>
+                                <ul class="max-h-270 overflow-y-auto scroll-sm pe-4">
+                                    <li class="mb-4">
+                                        <a href="#"
+                                            class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
+                                            <span class="text-2xl text-main-600 d-flex"><i
+                                                    class="fa-solid fa-gear"></i></span>
+                                            <span class="text">Account Settings</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="pt-8 border-top border-gray-100">
+                                        <a href="#"
+                                            class="py-12 text-15 px-20 hover-bg-danger-50 text-gray-300 hover-text-danger-600 rounded-8 flex-align gap-8 fw-medium text-15">
+                                            <span class="text-2xl text-main-600 d-flex"><i
+                                                    class="fa-solid fa-right-from-bracket"></i></span>
+                                            <span class="text">Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Toggle Button End -->
+
+
+
+        </div>
+
+
+        <div class="dashboard-body">
+            <!-- Breadcrumb Start -->
+            <div class="breadcrumb mb-24">
+                <ul class="flex-align gap-4">
+                    <li><a href="index.html" class="text-gray-200 fw-normal text-15 hover-text-main-600">Home</a></li>
+                    <li> <span class="text-gray-500 fw-normal d-flex"><i
+                                    class="fa-solid fa-chevron-right"></i></span> </li>
+                    <li><a href="h-number.html" class="text-gray-200 fw-normal text-15 hover-text-main-600">H Number</a>
+                    </li>
+                    <li> <span class="text-gray-500 fw-normal d-flex"><i
+                                    class="fa-solid fa-chevron-right"></i></span> </li>
+                    <li><span class="fw-semibold text-main-600 fw-normal text-15">Add new</span></li>
+                </ul>
+            </div>
+
+            <form action="#" class="h-number-form">
+                <div class="card mt-24">
+                    <div class="card-header border-bottom">
+                        <h3 class="mb-16">Add new additive</h3>
+                        <p class="text-gray-600 text-15">Please fill full details about additive detail.</p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="text-gray-300">E number</h5>
+
+
+                        <div class="row mb-20">
+                            <div class="col-sm-4 col-xs-4">
+                                <label for="" class="form-label mb-8 h6">E Number</label>
+                                <input type="text" class="form-control py-11" id="" placeholder="E number..." required>
+                            </div>
+                            <div class="col-sm-4 col-xs-4">
+                                <label for="" class="form-label mb-8 h6">INS</label>
+                                <input type="text" class="form-control py-11" id="" placeholder="INS number...">
+                            </div>
+                            <div class="col-sm-4 col-xs-4">
+                                <label for="" class="form-label mb-8 h6">CAS Number</label>
+                                <input type="text" class="form-control py-11" id="" placeholder="CAS number...">
+                            </div>
+
+                        </div>
+                        <div class="row mb-20 ">
+                            <div class="col-12">
+                                <label for="" class="form-label mb-8 h6">Additive Name</label>
+                                <input type="text" class="form-control py-11" id="" placeholder="Additive name..."
+                                    required>
+                            </div>
+                        </div>
+                        <div class="row mb-20">
+                            <div class="col-sm-4 col-xs-4">
+                                <label for="" class="h6 mb-8 fw-semibold font-heading">Category</label>
+                                <div class="position-relative">
+                                    <select id="" class="form-select py-9 placeholder-13 text-15" required>
+                                        <option value="1" disabled="" selected="">Select Category</option>
+                                        <option value="2">Category 1</option>
+                                        <option value="2">Category 2</option>
+                                        <option value="2">Category 3</option>
+                                        <option value="2">Category 4</option>
+                                        <option value="2">Category 5</option>
+                                        <option value="2">Category 6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-4">
+                                <label for="" class="h6 mb-8 fw-semibold font-heading">Sub Category</label>
+                                <div class="position-relative">
+                                    <select id="" class="form-select py-9 placeholder-13 text-15" required>
+                                        <option value="1" disabled="" selected="">Select Sub Category</option>
+                                        <option value="2">Sub Category 1</option>
+                                        <option value="2">Sub Category 2</option>
+                                        <option value="2">Sub Category 3</option>
+                                        <option value="2">Sub Category 4</option>
+                                        <option value="2">Sub Category 5</option>
+                                        <option value="2">Sub Category 6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-4">
+                                <label for="" class="h6 mb-8 fw-semibold font-heading">Halal Status</label>
+                                <div class="position-relative">
+                                    <select id="" class="form-select py-9 placeholder-13 text-15" required>
+                                        <option value="1" disabled="" selected="">Select Halal Status</option>
+                                        <option value="2">Halal by Certificate</option>
+                                        <option value="2">Halal by Fatwa</option>
+                                        <option value="2">Mushbooh</option>
+                                        <option value="2">Unidentified</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+                <div class="card mt-24">
+
+                    <div class="card-body">
+                        <h5 class="text-gray-300">H number</h5>
+
+
+                        <div class="row mb-20">
+                            <div class="col-sm-4 col-xs-4">
+                                <label for="" class="form-label mb-8 h6">H Number</label>
+                                <input type="text" class="form-control py-11" id="" placeholder="H number..." required>
+                            </div>
+                            <div class="col-sm-4 col-xs-4">
+                                <label for="" class="h6 mb-8 fw-semibold font-heading">Category</label>
+                                <div class="position-relative">
+                                    <select id="" class="form-select py-9 placeholder-13 text-15" required>
+                                        <option value="1" disabled="" selected="">Select Category</option>
+                                        <option value="2">Category 1</option>
+                                        <option value="2">Category 2</option>
+                                        <option value="2">Category 3</option>
+                                        <option value="2">Category 4</option>
+                                        <option value="2">Category 5</option>
+                                        <option value="2">Category 6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-4">
+                                <label for="" class="h6 mb-8 fw-semibold font-heading">Sub Category</label>
+                                <div class="position-relative">
+                                    <select id="" class="form-select py-9 placeholder-13 text-15" required>
+                                        <option value="1" disabled="" selected="">Select Sub Category</option>
+                                        <option value="2">Sub Category 1</option>
+                                        <option value="2">Sub Category 2</option>
+                                        <option value="2">Sub Category 3</option>
+                                        <option value="2">Sub Category 4</option>
+                                        <option value="2">Sub Category 5</option>
+                                        <option value="2">Sub Category 6</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card mt-24">
+                    <div class="card-body">
+                        <h5 class="text-gray-300">Description</h5>
+
+
+                        <div class="row mb-20">
+                            <div class="col-12">
+                                <label for="" class="form-label mb-8 h6 flex-align">TH <i
+                                        class="desc-flag-label th"></i></label>
+                                <textarea class="form-control" id="desc" rows="4" cols="50"
+                                    placeholder="Write some text"></textarea>
+                            </div>
+
+
+                        </div>
+                        <div class="row mb-20">
+                            <div class="col-12">
+                                <label for="" class="form-label mb-8 h6 flex-align">EN <i
+                                        class="desc-flag-label en"></i></label>
+                                <textarea class="form-control" id="desc" rows="4" cols="50"
+                                    placeholder="Write some text"></textarea>
+                            </div>
+
+
+                        </div>
+                        <div class="row mb-20">
+                            <div class="col-12">
+                                <label for="" class="form-label mb-8 h6">Remark</label>
+                                <textarea class="form-control" id="desc" rows="4" cols="50"
+                                    placeholder="Write some text"></textarea>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="card mt-24">
+                    <div class="card-body">
+                        <h5 class="text-gray-300">Gallery</h5>
+
+                        <div class="col-12">
+                            <div id="fileUpload" class="fileUpload image-upload file-container">
+
+                                <label for="fileUpload-2" class="file-upload image-upload__box image-upload__trigger">
+                                    <div class="image-upload__boxInner">
+                                        <i class="fa-solid fa-images mb-8 image-upload__icon w-100"></i>
+                                        <h5 class="mb-4">Drag or <span class="text-main-600"> Browse</span></h5>
+                                        <p class="text-13">PNG, JPEG (max 5mb size)</p>
+
+                                    </div>
+                                    <input type="file" id="fileUpload-2" name="files[]" multiple hidden="">
+                                </label>
+
+                                <div id="multiImagePreviewContainer" class="d-flex flex-wrap gap-12 mt-16">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="footbar-actions d-flex justify-content-end gap-12 box-shadow-sm">
+        <a href="h-number.html"
+            class="btn btn-outline-secondary text-danger-500 hover-text-danger-500 hover-bg-danger-100 text-15 px-24 py-12 rounded-8 hover-border-danger-600">Cancel</a>
+        <button
+            class="btn bg-main-600 text-white hover-text-main-600 hover-bg-light-50 text-15 px-24 py-12 rounded-8 hover-border-main-600">Save</button>
+    </div>
+
+
+
+    <!-- Jquery js -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Bundle Js -->
+    <script src="assets/js/boostrap.bundle.min.js"></script>
+
+    <!-- file upload -->
+    <!-- <script src="assets/js/file-upload.js"></script> -->
+    <!-- file upload -->
+    <script src="assets/js/plyr.js"></script>
+    <!-- dataTables -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="assets/js/jquery-ui.js"></script>
+
+
+
+
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+
+
+
+
+
+</body>
+
+</html>
