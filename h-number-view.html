@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title> Add new</title>
+    <title> View</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/hsc-chula-new-logo.png" type="image/x-icon">
     <!-- Bootstrap -->
@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="assets/css/jquery-ui.css">
     <!-- editor quill Ui -->
     <link rel="stylesheet" href="assets/css/editor-quill.css">
-
+    <!-- flag css -->
+    <link rel="stylesheet" href="assets/css/flag-icons.css">
 
 
     <!-- Main css -->
@@ -177,87 +178,60 @@
                     </li>
                     <li> <span class="text-gray-500 fw-normal d-flex"><i class="fa-solid fa-chevron-right"></i></span>
                     </li>
-                    <li><span class="fw-semibold text-main-600 fw-normal text-15">Add new</span></li>
+                    <li><span class="fw-semibold text-main-600 fw-normal text-15">View</span></li>
                 </ul>
             </div>
 
-            <form action="#" class="h-number-form">
+            <form action="#" class="h-number-form-view">
                 <div class="card mt-24">
                     <div class="card-header border-bottom">
-                        <div class="d-flex flex-align justify-content-between w-100">
-                               <h3 class="mb-16">Add new additive</h3>
-                               <div class="flex-align gap-8"><span class="h4 m-0">Status:</span><span class="h4 m-0 text-gray-200 w-auto fw-bold">Draft</span></div>
-                        </div>
-                     
-                        <p class="text-gray-600 text-15">Please fill full details about additive detail.</p>
+                        <h3 class="text-main-600 mb-0">E100</h3>
+
                     </div>
                     <div class="card-body">
                         <h5 class="text-gray-300">E number</h5>
 
 
                         <div class="row">
-                            <div class="col-sm-4 col-xs-4">
-                                <label for="" class="form-label mb-8 h6">E Number</label>
-                                <input type="text" class="form-control py-11" id="" placeholder="E number..." required>
+                            <div class="col-sm-4 col-xs-4 view-only">
+                                <label for="" class="form-label h6">E Number</label>
+                                <span>E100</span>
+                                <!-- <input type="text" class="form-control py-11" id="" value="E100" required> -->
                             </div>
-                            <div class="col-sm-4 col-xs-4">
-                                <label for="" class="form-label mb-8 h6">INS</label>
-                                <input type="text" class="form-control py-11" id="" placeholder="INS number...">
+                            <div class="col-sm-4 col-xs-4 view-only">
+                                <label for="" class="form-label h6">INS</label>
+                                <span>INS0XXxxx</span>
                             </div>
-                            <div class="col-sm-4 col-xs-4">
-                                <label for="" class="form-label mb-8 h6">CAS Number</label>
-                                <input type="text" class="form-control py-11" id="" placeholder="CAS number...">
+                            <div class="col-sm-4 col-xs-4 view-only">
+                                <label for="" class="form-label h6">CAS Number</label>
+                                <span>CASXXXX</span>
                             </div>
 
                         </div>
                         <div class="row ">
-                            <div class="col-12">
+                            <div class="col-12 view-only">
                                 <label for="" class="form-label mb-8 h6">Additive Name</label>
-                                <input type="text" class="form-control py-11" id="" placeholder="Additive name..."
-                                    required>
+                                <span>Sample Additive</span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-sm-4 col-xs-4">
-                                <label for="" class="h6 mb-8 fw-semibold font-heading">Category</label>
-                                <div class="position-relative">
-                                    <select id="" class="form-select py-9 placeholder-13 text-15" required>
-                                        <option value="1" disabled="" selected="">Select Category</option>
-                                        <option value="2">Category 1</option>
-                                        <option value="2">Category 2</option>
-                                        <option value="2">Category 3</option>
-                                        <option value="2">Category 4</option>
-                                        <option value="2">Category 5</option>
-                                        <option value="2">Category 6</option>
-                                    </select>
-                                </div>
+                            <div class="col-sm-4 col-xs-4 view-only">
+                                <label for="" class="form-label h6">H Number</label>
+                                <span>H100</span>
                             </div>
-                            <div class="col-sm-4 col-xs-4">
-                                <label for="" class="h6 mb-8 fw-semibold font-heading">Sub Category</label>
-                                <div class="position-relative">
-                                    <select id="" class="form-select py-9 placeholder-13 text-15" required>
-                                        <option value="1" disabled="" selected="">Select Sub Category</option>
-                                        <option value="2">Sub Category 1</option>
-                                        <option value="2">Sub Category 2</option>
-                                        <option value="2">Sub Category 3</option>
-                                        <option value="2">Sub Category 4</option>
-                                        <option value="2">Sub Category 5</option>
-                                        <option value="2">Sub Category 6</option>
-                                    </select>
-                                </div>
+                            <div class="col-sm-4 col-xs-4 view-only">
+                                <label for="" class="h6 fw-semibold font-heading">Category</label>
+                                <span>Colours</span>
                             </div>
-                            <div class="col-sm-4 col-xs-4">
-                                <label for="" class="h6 mb-8 fw-semibold font-heading">Halal Status</label>
-                                <div class="position-relative">
-                                    <select id="" class="form-select py-9 placeholder-13 text-15" required>
-                                        <option value="1" disabled="" selected="">Select Halal Status</option>
-                                        <option value="2">Halal by Certificate</option>
-                                        <option value="2">Halal by Fatwa</option>
-                                        <option value="2">Mushbooh</option>
-                                        <option value="2">Unidentified</option>
+                            <div class="col-sm-4 col-xs-4 view-only">
+                                <label for="" class="h6 fw-semibold font-heading">Sub Category</label>
+                                <span>Sub Category 1</span>
+                            </div>
 
-                                    </select>
-                                </div>
+
+                            <div class="col-sm-4 col-xs-4 view-only">
+                                <label for="" class="h6 mb-8 fw-semibold font-heading">Halal Status</label>
+                                <span>Halal by Certificate</span>
                             </div>
                         </div>
 
@@ -273,37 +247,17 @@
 
 
                         <div class="row">
-                            <div class="col-sm-4 col-xs-4">
-                                <label for="" class="form-label mb-8 h6">H Number</label>
-                                <input type="text" class="form-control py-11" id="" placeholder="H number..." required>
+                            <div class="col-sm-4 col-xs-4 view-only">
+                                <label for="" class="form-label h6">H Number</label>
+                                <span>H100</span>
                             </div>
-                            <div class="col-sm-4 col-xs-4">
-                                <label for="" class="h6 mb-8 fw-semibold font-heading">Category</label>
-                                <div class="position-relative">
-                                    <select id="" class="form-select py-9 placeholder-13 text-15" required>
-                                        <option value="1" disabled="" selected="">Select Category</option>
-                                        <option value="2">Category 1</option>
-                                        <option value="2">Category 2</option>
-                                        <option value="2">Category 3</option>
-                                        <option value="2">Category 4</option>
-                                        <option value="2">Category 5</option>
-                                        <option value="2">Category 6</option>
-                                    </select>
-                                </div>
+                            <div class="col-sm-4 col-xs-4 view-only">
+                                <label for="" class="h6 fw-semibold font-heading">Category</label>
+                                <span>Colours</span>
                             </div>
-                            <div class="col-sm-4 col-xs-4">
-                                <label for="" class="h6 mb-8 fw-semibold font-heading">Sub Category</label>
-                                <div class="position-relative">
-                                    <select id="" class="form-select py-9 placeholder-13 text-15" required>
-                                        <option value="1" disabled="" selected="">Select Sub Category</option>
-                                        <option value="2">Sub Category 1</option>
-                                        <option value="2">Sub Category 2</option>
-                                        <option value="2">Sub Category 3</option>
-                                        <option value="2">Sub Category 4</option>
-                                        <option value="2">Sub Category 5</option>
-                                        <option value="2">Sub Category 6</option>
-                                    </select>
-                                </div>
+                            <div class="col-sm-4 col-xs-4 view-only">
+                                <label for="" class="h6 fw-semibold font-heading">Sub Category</label>
+                                <span>Sub Category 1</span>
                             </div>
 
                         </div>
@@ -312,15 +266,16 @@
                     </div>
                 </div>
                 <div class="card mt-24">
-                    <div class="card-body">
+                    <div class="card-body description-section">
                         <h5 class="text-gray-300">Description</h5>
 
                         <div class="row">
                             <div class="col-12">
                                 <label for="" class="form-label mb-8 h6 flex-align">EN <i
                                         class="desc-flag-label en"></i></label>
-                                <textarea class="form-control" id="desc" rows="4" cols="50"
-                                    placeholder="Write some text"></textarea>
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+                                    nascetur ridiculus mus.</p>
                             </div>
 
 
@@ -329,8 +284,16 @@
                             <div class="col-12">
                                 <label for="" class="form-label mb-8 h6 flex-align">TH <i
                                         class="desc-flag-label th"></i></label>
-                                <textarea class="form-control" id="desc" rows="4" cols="50"
-                                    placeholder="Write some text"></textarea>
+                                <p>ตู้เซฟซิลเวอร์ปักขคณนาซูโม่ โยเกิร์ตหลวงตา ฟลอร์พอเพียงแคมปัสระโงก บร็อกโคลี ปาสกาล
+                                    โฟม ตรวจทานเยอร์บีร่า พาสต้าไลน์เฟิร์ม เบอร์รีลาตินโปรเจกเตอร์นอมินี
+                                    หลินจือเวณิกาซีอีโอ โคโยตี้พาสเจอร์ไรส์เวอร์ยะเยือกถ่ายทำ แซมบ้า ซะสันทนาการ
+                                    คณาญาติเปปเปอร์มินต์เบิร์ด บรรพชนแฟลช เปเปอร์โนติส
+
+                                    หลวงปู่เช็งเม้งผ้าห่ม แกรนด์ความหมาย ไฮไลท์โดนัท
+                                    บลูเบอร์รี่ตี๋โพสต์ฟาสต์ฟู้ดโบรชัวร์ โครนาซากุระบริกรโรแมนติกฮาโลวีน
+                                    ปิยมิตรไฟลท์ออร์แกนิก คาแรคเตอร์เทียมทาน ศิลปากร สปิริต เป็นไง ซัพพลาย
+                                    ไมเกรนหมั่นโถวก๊วน อัตลักษณ์ลาเต้ เยอบีร่า เทวาธิราชพลาซ่ากุนซือเพาเวอร์เซอร์ไพรส์
+                                    ฮอต</p>
                             </div>
 
 
@@ -339,8 +302,7 @@
                         <div class="row">
                             <div class="col-12">
                                 <label for="" class="form-label mb-8 h6">Remark</label>
-                                <textarea class="form-control" id="desc" rows="4" cols="50"
-                                    placeholder="Write some text"></textarea>
+                                <p>Null</p>
                             </div>
 
 
@@ -381,9 +343,7 @@
 
     <div class="footbar-actions d-flex justify-content-end gap-12 box-shadow-sm">
         <a href="h-number.html"
-            class="btn btn-outline-secondary text-danger-500 hover-text-danger-500 hover-bg-danger-100 text-15 px-24 py-12 rounded-8 hover-border-danger-600">ยกเลิก</a>
-        <button
-            class="btn bg-main-600 text-white hover-text-main-600 hover-bg-light-50 text-15 px-24 py-12 rounded-8 hover-border-main-600">บันทึก</button>
+            class="btn bg-main-600 text-white hover-text-main-600 hover-bg-light-50 text-15 px-24 py-12 rounded-8 hover-border-main-600">กลับ</a>
     </div>
 
 

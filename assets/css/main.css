@@ -9849,22 +9849,22 @@ span.h4e-inactive {
 
 .desc-flag-label.th {
 
-    background-image: url("../images/icons/th.svg") ;
+    background-image: url("../images/icons/th.png") ;
     background-size: cover;
     display: block;
     width: 30px;
-    height: 30px;
+    height: 20px;
     margin-left: 8px;
     background-repeat: round;
 }
 
 .desc-flag-label.en {
 
-    background-image: url("../images/icons/us.svg") ;
+    background-image: url("../images/icons/us.png") ;
     background-size: cover;
     display: block;
    width: 30px;
-    height: 30px;
+    height:20px;
     margin-left: 8px;
     background-repeat: round;
 }
@@ -9903,9 +9903,51 @@ span.h4e-inactive {
 .h-number-filter{
     display: flex;
     flex-direction: row;
+    margin-right: 16px;
 
 }
+/* form style */
+form .card-body .row>div{
+    margin-bottom: 16px;
+}
+form.h-number-form-view .view-only{
+    display: flex;
+    align-items: center;
 
+}
+form.h-number-form-view label{
+    width: 120px;
+    white-space: nowrap;
+    margin-right: 8px;
+    margin-bottom: 0 ;
+}
+form.h-number-form-view .description-section label{
+   
+    margin-bottom: 16px !important;
+}
+form.h-number-form-view input,form.h-number-form-view select{
+    border: none !important;
+}
+form.h-number-form-view textarea,form.h-number-form textarea{
+    padding: 8px;
+}
+form.h-number-form-view textarea,form.h-number-form textarea{
+    line-height: 1.4;
+}
+.h-number-form-view select:disabled{
+    background: none !important;
+    background-color: none !important;
+}
+.h-number-form-view .view-only span{
+    color: var(--bs-green);
+    font-weight: 500 !important;
+}
+table tr:hover {
+ 
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+}
+/* end form style */
 @media screen and (max-width: 767px) {
     form.h-number-filter .row{
         gap: 16px;
