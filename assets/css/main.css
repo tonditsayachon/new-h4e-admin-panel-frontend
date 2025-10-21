@@ -9812,6 +9812,9 @@ i.halal-status.unidentify {
 .h-no-table td a.distr {
     text-decoration: underline !important;
 }
+.h-no-table td span.distr {
+    color: #000 !important;
+}
 
 span.h4e-active {
     padding: 4px 10px;
@@ -9947,9 +9950,7 @@ form.h-number-form-view .description-section label{
 form.h-number-form-view input,form.h-number-form-view select{
     border: none !important;
 }
-form.h-number-form-view textarea,form.h-number-form textarea{
-    padding: 8px;
-}
+
 form.h-number-form-view textarea,form.h-number-form textarea{
     line-height: 1.4;
 }
