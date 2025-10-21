@@ -606,7 +606,7 @@ input[type=number] {
 }
 
 .form-switch .form-check-input:checked {
-    background-color: var(--primary-600);
+    background-color: var(--main-600) !important;
 }
 
 .form-switch .form-check-input:checked::before {
@@ -9741,7 +9741,10 @@ i.actions {
     margin-inline-end: 4px;
     padding: 4px;
     width: fit-content;
-
+    
+}
+i.actions:hover{
+    transform: scale(1.1);
 }
 
 i.actions.view {
@@ -9910,6 +9913,22 @@ span.h4e-inactive {
 form .card-body .row>div{
     margin-bottom: 16px;
 }
+form.h-number-form-edit .form-check-input{
+    width: 60px;
+    height: 30px;
+}
+form.h-number-form-edit .form-switch .form-check-input:checked::before {
+    left: calc(100% - 20px) !important;
+    padding: 8px;
+    
+}
+form.h-number-form-edit .form-switch .form-check-input::before{
+    left: 6px !important;
+    padding: 8px;
+}
+form.h-number-form-edit select{
+    color: #000 !important;
+}
 form.h-number-form-view .view-only{
     display: flex;
     align-items: center;
@@ -9947,6 +9966,78 @@ table tr:hover {
     border-top: 1px solid var(--gray-100);
     border-bottom: 1px solid var(--gray-100);
 }
+/* ============================ Gallery Preview Styles ==================== */
+
+/* กำหนดขนาดและรูปร่างของภาพตัวอย่างแต่ละภาพ */
+.image-preview-item-wrapper {
+    /* ใช้ชื่อ class ที่เหมาะสมกับภาพแต่ละภาพ */
+  width: 100px; /* ขนาดที่ต้องการให้ภาพย่อแสดง */
+    height: 100px;
+    position: relative; /* <--- สำคัญ: กำหนดให้เป็น relative */
+    overflow: hidden; /* ซ่อนส่วนที่เกินขอบเขต */
+    border-radius: 8px;
+    border: 1px solid var(--gray-100); /* เพิ่มเส้นขอบเพื่อความชัดเจน */
+    transition: box-shadow 0.2s linear;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.image-preview-item-wrapper:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเมื่อโฮเวอร์ */
+}
+
+/* รูปภาพจริงภายในกรอบ */
+.image-preview-item-wrapper img.image-preview {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* ครอบคลุมพื้นที่โดยไม่บิดเบี้ยว */
+    display: block;
+}
+div#multiImagePreviewContainer{
+    padding: 8px;
+}
+/* สไตล์สำหรับปุ่มลบ (X) */
+.btn-close-preview {
+    /* ตำแหน่งให้อยู่ที่มุมขวาบนของภาพตัวอย่าง */
+    /* ตำแหน่งให้อยู่ที่มุมขวาบนของภาพตัวอย่าง */
+    position: absolute; /* <--- สำคัญ: กำหนดให้เป็น absolute */
+    top: 0px; /* <--- จัดให้ชิดขอบด้านบน */
+    right: 0px; /* <--- จัดให้ชิดขอบด้านขวา */
+    
+    /* สไตล์ปุ่ม */
+    width: 20px;
+    height: 20px;
+    border-radius: 0 8px 0 8px; /* <--- ปรับให้มีขอบโค้งเฉพาะมุมบนขวา */
+    background-color: var(--danger-600) !important; /* สีแดงจาก theme ของคุณ */
+    color: white !important;
+    font-size: 10px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* อาจจะลบได้ถ้าไม่ต้องการเงา */
+    transition: transform 0.2s linear;
+    z-index: 10; /* <--- สำคัญ: ให้ปุ่มอยู่เหนือรูปภาพ */
+}
+
+.btn-close-preview:hover {
+    transform: scale(1.1);
+}
+
+/* แก้ไข CSS ของคุณที่มีอยู่แล้ว เพื่อป้องกันการซ้ำซ้อน/ขัดแย้ง */
+/* ถ้าคุณใช้ `image-preview-wrapper` ตามที่ผมแนะนำ อาจลบโค้ดนี้ออกได้ */
+.image-preview-wrapper .image-upload__deleteBtn {
+    /* ถ้าคุณใช้ชื่อ class 'btn-close-preview' ให้ยกเลิกการใช้ 'image-upload__deleteBtn' ที่นี่ */
+    /* หรือเปลี่ยนชื่อใน JS ให้ตรงกับชื่อเดิมที่คุณมีใน CSS */
+}
+
+/* ปรับแก้โครงสร้างคอนเทนเนอร์อัปโหลดไฟล์เดิม เพื่อให้ใช้พื้นที่ได้ดีขึ้น */
+.fileUpload.image-upload {
+    height: unset; /* ให้สูงตามเนื้อหา */
+    min-height: 150px; /* กำหนดความสูงขั้นต่ำ */
+}
+
+/* ================================================================= */
 /* end form style */
 @media screen and (max-width: 767px) {
     form.h-number-filter .row{
