@@ -9716,8 +9716,8 @@ button:focus {
 /* Email Css End */
 /*# sourceMappingURL=main.css.map */
 
+/* ============================= Start custom styles ============================ */
 
-/* start custom styles */
 .sidebar__logo {
     width: 100%;
     background-color: var(--main-600) !important;
@@ -9809,32 +9809,6 @@ i.halal-status.unidentify {
 }
 
 
-.h-no-table td a.distr {
-    text-decoration: underline !important;
-}
-.h-no-table td span.distr {
-    color: #000 !important;
-}
-
-span.h4e-active {
-    padding: 4px 10px;
-    border-radius: 20px;
-    background-color: var(--success-50);
-    color: var(--success-600);
-    border: 1px solid var(--teal-100);
-    width: 100%;
-    text-align: center;
-}
-
-span.h4e-inactive {
-    padding: 4px 10px;
-    border-radius: 20px;
-    background-color: var(--gray-100);
-    color: var(--gray-300);
-    border: 1px solid var(--teal-100);
-    width: 100%;
-    text-align: center;
-}
 
 .footbar-actions {
     padding: 16px 20px;
@@ -9974,6 +9948,41 @@ table tr:hover {
  
     border-top: 1px solid var(--gray-100);
     border-bottom: 1px solid var(--gray-100);
+}
+.table-striped>tbody>tr:nth-of-type(odd)>*{
+    color: #000 !important;
+}
+
+.h-no-table td a.distr {
+    text-decoration: underline !important;
+}
+.h-no-table td span.distr {
+    color: #000 !important;
+}
+.h-no-table td span.h-code{
+    padding: 4px 10px;
+    background-color: #17A2B8;
+    border-radius: 100px;
+    color: #fff;
+}
+span.h4e-active {
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: var(--success-50);
+    color: var(--success-600);
+    border: 1px solid var(--teal-100);
+    width: 100%;
+    text-align: center;
+}
+
+span.h4e-inactive {
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: var(--gray-100);
+    color: var(--gray-300);
+    border: 1px solid var(--teal-100);
+    width: 100%;
+    text-align: center;
 }
 /* end of form style */
 
