@@ -11,7 +11,9 @@
             var fileDivContent = `
                 <label for="${fileUploadId}" class="file-upload image-upload__box">
                     <div class="image-upload__boxInner">
-                        <i class="ph ph-image mb-8 image-upload__icon"></i>
+                         <i
+                        class="fa-solid fa-images mb-8 image-upload__icon w-100"
+                      ></i>
                         <h5 class="mb-4">Drag or <span class="text-main-600"> Browse</span></h5>
                         <p class="text-13">PNG, JPEG (max 5mb size)</p>
                         

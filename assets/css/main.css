@@ -9717,7 +9717,7 @@ button:focus {
 /*# sourceMappingURL=main.css.map */
 
 
-/* emn custom styles */
+/* start custom styles */
 .sidebar__logo {
     width: 100%;
     background-color: var(--main-600) !important;
@@ -9909,13 +9909,11 @@ span.h4e-inactive {
 .h-number-filter{
     display: flex;
     flex-direction: row;
-    margin-right: 16px;
+  
 
 }
 /* form style */
-form .card-body .row>div{
-    margin-bottom: 16px;
-}
+
 form.h-number-form-edit .form-check-input{
     width: 60px;
     height: 30px;
@@ -9932,54 +9930,67 @@ form.h-number-form-edit .form-switch .form-check-input::before{
 form.h-number-form-edit select{
     color: #000 !important;
 }
-form.h-number-form-view .view-only{
+div.h-number-form-view .view-only{
     display: flex;
     align-items: center;
 
 }
-form.h-number-form-view label{
+div.h-number-form-view label{
     width: 120px;
     white-space: nowrap;
     margin-right: 8px;
     margin-bottom: 0 ;
 }
-form.h-number-form-view .description-section label{
+div.h-number-form-view .description-section label{
    
     margin-bottom: 16px !important;
 }
-form.h-number-form-view input,form.h-number-form-view select{
+div.h-number-form-view input,div.h-number-form-view select{
     border: none !important;
 }
 
-form.h-number-form-view textarea,form.h-number-form textarea{
+div.h-number-form-view textarea,form.h-number-form textarea,form.h-number-form-edit input,form.h-number-form-edit textarea{
     line-height: 1.4;
 }
-.h-number-form-view select:disabled{
+div.h-number-form-view select:disabled{
     background: none !important;
     background-color: none !important;
 }
-.h-number-form-view .view-only span{
+div.h-number-form-view .view-only span{
     color: var(--bs-green);
     font-weight: 500 !important;
+}
+div.h-number-form-view .row,form.h-number-form-edit .row,form.h-number-form .row{
+    /* margin-bottom: 16px;
+
+    align-content: center; */
+}
+div.h-number-form-view .row>*,form.h-number-form-edit .row>*,form.h-number-form .row>*{
+    margin-bottom: 16px;
+
+    align-content: center;
 }
 table tr:hover {
  
     border-top: 1px solid var(--gray-100);
     border-bottom: 1px solid var(--gray-100);
 }
+/* end of form style */
+
+
 /* ============================ Gallery Preview Styles ==================== */
 
 /* กำหนดขนาดและรูปร่างของภาพตัวอย่างแต่ละภาพ */
 .image-preview-item-wrapper {
     /* ใช้ชื่อ class ที่เหมาะสมกับภาพแต่ละภาพ */
-  width: 100px; /* ขนาดที่ต้องการให้ภาพย่อแสดง */
-    height: 100px;
+  width: 200px; /* ขนาดที่ต้องการให้ภาพย่อแสดง */
+    height: 200px;
     position: relative; /* <--- สำคัญ: กำหนดให้เป็น relative */
     overflow: hidden; /* ซ่อนส่วนที่เกินขอบเขต */
     border-radius: 8px;
     border: 1px solid var(--gray-100); /* เพิ่มเส้นขอบเพื่อความชัดเจน */
     transition: box-shadow 0.2s linear;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgb(139 139 139 / 15%)
 }
 
 .image-preview-item-wrapper:hover {
@@ -9994,12 +10005,12 @@ table tr:hover {
     display: block;
 }
 div#multiImagePreviewContainer{
-    padding: 8px;
+    margin-bottom: 16px;
+    background-color: transparent !important;
 }
 /* สไตล์สำหรับปุ่มลบ (X) */
 .btn-close-preview {
-    /* ตำแหน่งให้อยู่ที่มุมขวาบนของภาพตัวอย่าง */
-    /* ตำแหน่งให้อยู่ที่มุมขวาบนของภาพตัวอย่าง */
+
     position: absolute; /* <--- สำคัญ: กำหนดให้เป็น absolute */
     top: 0px; /* <--- จัดให้ชิดขอบด้านบน */
     right: 0px; /* <--- จัดให้ชิดขอบด้านขวา */
@@ -10025,12 +10036,7 @@ div#multiImagePreviewContainer{
     transform: scale(1.1);
 }
 
-/* แก้ไข CSS ของคุณที่มีอยู่แล้ว เพื่อป้องกันการซ้ำซ้อน/ขัดแย้ง */
-/* ถ้าคุณใช้ `image-preview-wrapper` ตามที่ผมแนะนำ อาจลบโค้ดนี้ออกได้ */
-.image-preview-wrapper .image-upload__deleteBtn {
-    /* ถ้าคุณใช้ชื่อ class 'btn-close-preview' ให้ยกเลิกการใช้ 'image-upload__deleteBtn' ที่นี่ */
-    /* หรือเปลี่ยนชื่อใน JS ให้ตรงกับชื่อเดิมที่คุณมีใน CSS */
-}
+
 
 /* ปรับแก้โครงสร้างคอนเทนเนอร์อัปโหลดไฟล์เดิม เพื่อให้ใช้พื้นที่ได้ดีขึ้น */
 .fileUpload.image-upload {
@@ -10038,6 +10044,31 @@ div#multiImagePreviewContainer{
     min-height: 150px; /* กำหนดความสูงขั้นต่ำ */
 }
 
+
+/* ============================ Add Image Button Styles ==================== */
+
+/* ใช้คลาสหลักของ Thumbnail เพื่อให้มีขนาดเท่ากัน */
+.image-preview-item-wrapper.add-image-button {
+    /* สืบทอดขนาดจาก .image-preview-item-wrapper (100x100px) */
+    display: flex;
+    justify-content: center; /* จัดให้ + อยู่ตรงกลางแนวนอน */
+    align-items: center; /* จัดให้ + อยู่ตรงกลางแนวตั้ง */
+    cursor: pointer; 
+    border: 2px dashed var(--gray-300) !important; /* เส้นประ */
+    transition: all 0.2s;
+    background-color: var(--white); /* อาจใส่สีขาวเล็กน้อยเพื่อความชัดเจน */
+}
+
+.image-preview-item-wrapper.add-image-button:hover {
+    background-color: var(--gray-50); 
+    border-color: var(--primary-600) !important; /* เปลี่ยนสีเส้นประเมื่อโฮเวอร์ */
+}
+
+/* จัดสีและขนาดของไอคอนบวก */
+.image-preview-item-wrapper.add-image-button .fa-plus {
+    color: var(--gray-500); 
+    font-size: 1.5rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+}
 /* ================================================================= */
 /* end form style */
 @media screen and (max-width: 767px) {
