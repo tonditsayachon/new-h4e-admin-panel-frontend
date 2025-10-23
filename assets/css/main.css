@@ -9757,11 +9757,15 @@ i.actions.edit {
     background-color: var(--warning-50);
 }
 
-i.actions.del {
+i.actions.delete {
     color: var(--danger-600);
     background-color: var(--danger-50);
 }
-
+i.actions.disDelete{
+    color: var(--gray-300);
+    background-color: var(--gray-100);
+    cursor: not-allowed;
+}
 i.actions.distr {
     color: var(--teal-600);
     background-color: var(--teal-50);
@@ -9934,10 +9938,8 @@ div.h-number-form-view .view-only span{
     color: var(--bs-green);
     font-weight: 500 !important;
 }
-div.h-number-form-view .row,form.h-number-form-edit .row,form.h-number-form .row{
-    /* margin-bottom: 16px;
-
-    align-content: center; */
+div.h-number-form-view .view-only a i{
+    margin-right: 8px;
 }
 div.h-number-form-view .row>*,form.h-number-form-edit .row>*,form.h-number-form .row>*{
     margin-bottom: 16px;
@@ -9964,6 +9966,10 @@ table tr:hover {
     background-color: #17A2B8;
     border-radius: 100px;
     color: #fff;
+    white-space: nowrap;
+}
+table#additiveTable tr th:last-child, table#additiveTable tr td:last-child{
+    text-align: center;
 }
 span.h4e-active {
     padding: 4px 10px;
@@ -9971,7 +9977,7 @@ span.h4e-active {
     background-color: var(--success-50);
     color: var(--success-600);
     border: 1px solid var(--teal-100);
-    width: 100%;
+    width: 100px;
     text-align: center;
 }
 
@@ -9981,7 +9987,7 @@ span.h4e-inactive {
     background-color: var(--gray-100);
     color: var(--gray-300);
     border: 1px solid var(--teal-100);
-    width: 100%;
+     width: 100px;
     text-align: center;
 }
 /* end of form style */
@@ -10078,8 +10084,18 @@ div#multiImagePreviewContainer{
     color: var(--gray-500); 
     font-size: 1.5rem; /* ปรับขนาดให้ใหญ่ขึ้น */
 }
+hr.form-separator{
+    border-top: 1px solid #5e5e5e;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
 /* ================================================================= */
 /* end form style */
+
+.add-distributor-modal,.edit-distributor-modal,.view-distributor-modal {
+    max-width: 800px;
+}
 @media screen and (max-width: 767px) {
     form.h-number-filter .row{
         gap: 16px;
@@ -10094,5 +10110,8 @@ div#multiImagePreviewContainer{
 
     flex-direction: column;
 
+}
+div.h-number-form-view .view-only span{
+    width:200px
 }
 }
