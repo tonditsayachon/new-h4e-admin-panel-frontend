@@ -10097,6 +10097,9 @@ hr.form-separator{
 .add-distributor-modal,.edit-distributor-modal,.view-distributor-modal {
     max-width: 800px;
 }
+.del-number-modal{
+    max-width: 500px;
+}
 @media screen and (max-width: 767px) {
     form.h-number-filter .row{
         gap: 16px;

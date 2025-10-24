@@ -296,7 +296,8 @@
                                             <button type="button" id="editDistriBtn"><i
                                                     class="actions edit fa-solid fa-pen-to-square"></i></button>
 
-                                              <button type="submit"><i class="actions delete fa-solid fa-trash-can"></i></button>
+                                            <button type="submit" class="submitDelID"><i
+                                                    class="actions delete fa-solid fa-trash-can"></i></button>
                                         </div>
 
                                     </td>
@@ -328,7 +329,8 @@
                                             <button id="editDistriBtn" href="#"><i
                                                     class="actions edit fa-solid fa-pen-to-square"></i></button>
 
-                                              <button type="submit"><i class="actions delete fa-solid fa-trash-can"></i></button>
+                                            <button type="submit" class="submitDelID"><i
+                                                    class="actions delete fa-solid fa-trash-can"></i></button>
                                         </div>
 
                                     </td>
@@ -357,7 +359,8 @@
                                             <button type="button" id="editDistriBtn"><i
                                                     class="actions edit fa-solid fa-pen-to-square"></i></button>
 
-                                              <button type="submit"><i class="actions delete fa-solid fa-trash-can"></i></button>
+                                            <button type="submit" class="submitDelID"><i
+                                                    class="actions delete fa-solid fa-trash-can"></i></button>
                                         </div>
 
                                     </td>
@@ -389,7 +392,8 @@
                                             <button type="button" id="editDistriBtn"><i
                                                     class="actions edit fa-solid fa-pen-to-square"></i></button>
 
-                                              <button type="submit"><i class="actions delete fa-solid fa-trash-can"></i></button>
+                                            <button type="submit" class="submitDelID"><i
+                                                    class="actions delete fa-solid fa-trash-can"></i></button>
                                         </div>
 
                                     </td>
@@ -421,7 +425,8 @@
                                             <button type="button" id="editDistriBtn"><i
                                                     class="actions edit fa-solid fa-pen-to-square"></i></button>
 
-                                              <button type="submit"><i class="actions delete fa-solid fa-trash-can"></i></button>
+                                            <button type="submit" class="submitDelID"><i
+                                                    class="actions delete fa-solid fa-trash-can"></i></button>
                                         </div>
 
                                     </td>
@@ -451,7 +456,8 @@
                                             <button type="button" id="editDistriBtn"><i
                                                     class="actions edit fa-solid fa-pen-to-square"></i></button>
 
-                                              <button type="submit"><i class="actions delete fa-solid fa-trash-can"></i></button>
+                                            <button type="submit" class="submitDelID"><i
+                                                    class="actions delete fa-solid fa-trash-can"></i></button>
                                         </div>
 
                                     </td>
@@ -485,7 +491,8 @@
                                             <button type="button" id="editDistriBtn"><i
                                                     class="actions edit fa-solid fa-pen-to-square"></i></button>
 
-                                              <button type="submit"><i class="actions delete fa-solid fa-trash-can"></i></button>
+                                            <button type="submit" class="submitDelID"><i
+                                                    class="actions delete fa-solid fa-trash-can"></i></button>
                                         </div>
 
                                     </td>
@@ -518,7 +525,8 @@
                                             <button type="button" id="editDistriBtn"><i
                                                     class="actions edit fa-solid fa-pen-to-square"></i></button>
 
-                                              <button type="submit"><i class="actions delete fa-solid fa-trash-can"></i></button>
+                                            <button type="submit" class="submitDelID"><i
+                                                    class="actions delete fa-solid fa-trash-can"></i></button>
                                         </div>
 
                                     </td>
@@ -553,7 +561,8 @@
                                             <button type="button" id="editDistriBtn"><i
                                                     class="actions edit fa-solid fa-pen-to-square"></i></button>
 
-                                              <button type="submit"><i class="actions delete fa-solid fa-trash-can"></i></button>
+                                            <button type="submit" class="submitDelID"><i
+                                                    class="actions delete fa-solid fa-trash-can"></i></button>
                                         </div>
 
                                     </td>
@@ -566,12 +575,12 @@
 
         </div> <!-- end of dashboard-body -->
         <div class="footbar-actions d-flex justify-content-start gap-12 box-shadow-sm">
-        <a href="h-number.html"
-            class="btn bg-main-600 text-white hover-text-main-600 hover-bg-light-50 text-15 px-24 py-12 rounded-8 hover-border-main-600">กลับ</a>
-    </div>
+            <a href="h-number.html"
+                class="btn bg-main-600 text-white hover-text-main-600 hover-bg-light-50 text-15 px-24 py-12 rounded-8 hover-border-main-600">กลับ</a>
+        </div>
     </div> <!--end of dashboard-main-wrapper -->
     <!-- Footer Action Bar -->
-    
+
     <!-- addNewDistributorModal -->
     <div class="modal fade" id="addNewDistributorModal" tabindex="-1" aria-labelledby="addNewDistributorModalLabel"
         aria-hidden="true">
@@ -803,7 +812,39 @@
         </div>
     </div>
     <!-- end of viewDistributorModal -->
+    <!-- delNumberModal -->
+    <div class="modal fade" id="delNumberModal" tabindex="-1" aria-labelledby="delNumberModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered del-number-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title mb-0" id="delNumberModalLabel">คุณแน่ใจใช่ไหม?</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-20 pt-20">
+                    <form id="editDistributorForm">
+                        <div class="mb-20">
+                            <label for="distributorName" class="form-label h6">กรุณาพิมพ์ <span class="text-danger-600 m-4">Delete</span>และคลิกปุ่มยืนยันเพื่อทำการลบ</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control py-11" id=""
+                                    placeholder="กรุณาพิมพ์รหัสสาร..." required />
 
+                            </div>
+                        </div>
+
+
+                     <div class="modal-footer border-0 pt-0 d-flex justify-content-end">
+                    <button type="submit" class="btn bg-main-600 text-white px-24 py-12 rounded-100"
+                        id="confirmDelHnumber">ยืนยัน</button>
+                    <button type="button"
+                        class="btn btn-outline-danger-600 text-danger-600 hover-bg-danger-50 px-24 py-12 rounded-100"
+                        data-bs-dismiss="modal">ยกเลิก</button>
+                </div>
+                    </form>
+                </div>
+             
+            </div>
+        </div>
+    </div>
 
     <!-- ================== BEGIN core-js ================== -->
 
@@ -832,6 +873,14 @@
             var addDistributorModal = new bootstrap.Modal($('#addNewDistributorModal')[0]);
             var editDistributorModal = new bootstrap.Modal($('#editDistributorModal')[0]);
             var viewDistributorModal = new bootstrap.Modal($('#viewDistributorModal')[0]);
+            var deleteHnumberModal = new bootstrap.Modal($('#delNumberModal')[0]);
+
+
+
+
+             $('.submitDelID').on('click', function () {
+                deleteHnumberModal.show();
+            });
             // เชื่อมปุ่ม "เพิ่ม" (#addDistriBtn) กับ modal
             $('#addDistriBtn').on('click', function () {
                 addDistributorModal.show();
@@ -849,20 +898,25 @@
             // ตัวอย่างการจับ event เมื่อกดยืนยันใน modal (ถ้าต้องการประมวลผลข้อมูล)
             $('#confirmAddDistributor').on('click', function () {
                 // ... โค้ดสำหรับบันทึกข้อมูลที่นี่
-                console.log("Distributor added!");
+             
                 addDistributorModal.hide();
             });
 
             $('#confirmEditDistributor').on('click', function () {
                 // ... โค้ดสำหรับบันทึกข้อมูลที่นี่
-                console.log("Distributor edited!");
+              
                 editDistributorModal.hide();
             });
 
             $('#confirmViewDistributor').on('click', function () {
                 // ... โค้ดสำหรับบันทึกข้อมูลที่นี่
-                console.log("Distributor viewed!");
+              
                 viewDistributorModal.hide();
+            });
+             $('#confirmDelHnumber').on('click', function () {
+                // ... โค้ดสำหรับบันทึกข้อมูลที่นี่
+               
+                deleteHnumberModal.hide();
             });
         });
 
