@@ -648,7 +648,7 @@
                                         <a href="h-number-view.html"><i class="actions view fa-solid fa-eye"></i></a>
                                         <a href="h-number-edit.html"><i class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit"><i class="actions disDelete fa-solid fa-trash-can"></i></button>
+                                        <button type="submit" id="deleteHnumberBtn"><i class="actions disDelete fa-solid fa-trash-can"></i></button>
                                     </div>
 
                                 </td>
@@ -697,6 +697,108 @@
         </div>
     </div>
 
+        <!-- viewDistributorModal -->
+    <div class="modal fade" id="viewDistributorModal" tabindex="-1" aria-labelledby="viewDistributorModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered view-distributor-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title mb-0" id="viewDistributorModalLabel">View: <span class="text-main-600">Sample
+                            Company</span></h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-20 pt-20">
+                    <form id="editDistributorForm">
+                        <div class="mb-20">
+                            <label for="distributorName" class="form-label h6">Distributor</label>
+                            <div class="input-group">
+
+                                <span class="text-gray-500">Sample Company</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-20">
+                            <label for="" class="form-label h6 d-block">Address</label>
+                            <span class="text-gray-500">001/01 No.xx News Street Road, New Town City, Country
+                                00000</span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6 mb-20">
+                                <label for="distributorTel" class="form-label h6">Tel</label>
+
+                                <span class="text-gray-500">(+00)00-000-0000</span>
+
+                            </div>
+                            <div class="col-sm-6 mb-20">
+                                <label for="distributorEmail" class="form-label h6">Email</label>
+
+                                <span class="text-gray-500">sample@company.com</span>
+                            </div>
+                        </div>
+                        <div>
+                            <hr class="form-separator mb-20">
+                        </div>
+                        <div class="mb-20">
+                            <label for="guaranteeBy" class="form-label h6">Guarantee by</label>
+                            <div class="input-group">
+                                <span class="text-gray-500">THE CENTRAL ISLAMIC COUNCIL OF THAILAND</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="mb-20">
+                            <label for="" class="form-label h6 d-block">Country</label>
+                            <span class="text-gray-500">Thailand</span>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer border-0 pt-0 d-flex justify-content-end">
+                    <button type="button" class="btn bg-main-600 text-white px-24 py-12 rounded-100"
+                        id="confirmViewDistributor">ยืนยัน</button>
+                    <button type="button"
+                        class="btn btn-outline-danger-600 text-danger-600 hover-bg-danger-50 px-24 py-12 rounded-100"
+                        data-bs-dismiss="modal">ยกเลิก</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+        <!-- viewDistributorModal -->
+    <div class="modal fade" id="viewDistributorModal" tabindex="-1" aria-labelledby="viewDistributorModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered view-distributor-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title mb-0" id="viewDistributorModalLabel">View: <span class="text-main-600">Sample
+                            Company</span></h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-20 pt-20">
+                    <form id="editDistributorForm">
+                        <div class="mb-20">
+                            <label for="distributorName" class="form-label h6">Distributor</label>
+                            <div class="input-group">
+
+                                
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer border-0 pt-0 d-flex justify-content-end">
+                    <button type="button" class="btn bg-main-600 text-white px-24 py-12 rounded-100"
+                        id="confirmViewDistributor">ยืนยัน</button>
+                    <button type="button"
+                        class="btn btn-outline-danger-600 text-danger-600 hover-bg-danger-50 px-24 py-12 rounded-100"
+                        data-bs-dismiss="modal">ยกเลิก</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Jquery js -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap Bundle Js -->
@@ -769,11 +871,25 @@
             document.body.removeChild(a);
         }
         // ========================== Export Js End ==============================
+        // Modal Js
+        $(document).ready(function () {
+            // กำหนดตัวแปรสำหรับ modal
+            var deleteHnumberModal = new bootstrap.ModalI($('#delHnumberModal')[0]);
 
-        // Table Header Checkbox checked all js Start
-        // $('#selectAll').on('change', function () {
-        //     $('.form-check .form-check-input').prop('checked', $(this).prop('checked'));
-        // });
+            // เชื่อมปุ่ม "ลบ"
+            $('#deleteHnumberBtn').on('click', function () {
+                deleteHnumberModal.show();
+            });
+
+            // เชื่อมปุ่ม "เพิ่ม" (#addDistriBtn) กับ modal
+           
+
+            $('#confirmDelDistributor').on('click', function () {
+                // ... โค้ดสำหรับบันทึกข้อมูลที่นี่
+                console.log("Distributor Deleted!");
+                viewDistributorModal.hide();
+            });
+        });
 
         // Data Tables
         new DataTable('#assignmentTable', {

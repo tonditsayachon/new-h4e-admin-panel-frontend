@@ -9815,7 +9815,7 @@ i.halal-status.unidentify {
 
 
 .footbar-actions {
-    padding: 16px 20px;
+    padding: 10px 16px;
     position: sticky;
     bottom: 0;
     background-color: hsl(var(--white));
@@ -9968,6 +9968,7 @@ table tr:hover {
     color: #fff;
     white-space: nowrap;
 }
+
 table#additiveTable tr th:last-child, table#additiveTable tr td:last-child{
     text-align: center;
 }
