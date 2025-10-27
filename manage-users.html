@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title> Guarantee</title>
+    <title> Manage Users</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/hsc-chula-new-logo.png" type="image/x-icon">
     <!-- Bootstrap -->
@@ -70,7 +70,7 @@
 
                     </li>
 
-                    <li class="sidebar-menu__item activePage">
+                    <li class="sidebar-menu__item">
                         <a href="guarantee.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-file-shield"></i></span>
                             <span class="text">Guarantee</span>
@@ -79,7 +79,7 @@
 
    <li class=" border-top border-gray-100 mb-8">  
                     </li>
-                    <li class="sidebar-menu__item">
+                    <li class="sidebar-menu__item activePage">
                         <a href="manage-users.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-users"></i></span>
                             <span class="text">Manage User</span>
@@ -165,12 +165,12 @@
                         </li>
                         <li> <span class="text-gray-500 fw-normal d-flex"><i
                                     class="fa-solid fa-chevron-right"></i></span> </li>
-                        <li><span class="text-main-600 fw-normal text-15">Guarantee</span></li>
+                        <li><span class="text-main-600 fw-normal text-15">Users</span></li>
                     </ul>
                 </div>
                 <!-- Breadcrumb End -->
             </div>
-                <h3>Guarantee</h3>
+                <h3 class="text-gray-300">Manage Users</h3>
             <div class="search-filter my-20">
 
                 <form action="" class="h-number-filter gap-8">
@@ -190,18 +190,10 @@
                     <div class="col">
                         <div class="position-relative">
                             <select id="country" class="form-select py-12 placeholder-13 text-15 border-main-600">
-                                <option value="1" selected>All Country</option>
-                                <option value="2">Thailand</option>
-                                <option value="3">Philippines
-                                </option>
-                                <option value="4">Indodesia
-                                </option>
-                                <option value="5">India
-                                </option>
-                                <option value="6">Barian
-                                </option>
-                                <option value="7">Saudi Arabia
-                                </option>
+                                <option value="1" selected>All Status</option>
+                                <option value="2">Active</option>
+                                <option value="3">Inactive
+                             
                             </select>
                         </div>
                     </div>
@@ -226,7 +218,7 @@
 
 
 
-                <a href="guarantee-add.html" class="btn btn-main px-24 py-12 align-content-center text-nowrap">
+                <a href="add-user.html" class="btn btn-main px-24 py-12 align-content-center text-nowrap">
                     <i class="fa-solid fa-plus"></i>
                     เพิ่ม
                 </a>
@@ -234,14 +226,15 @@
 
             <div class="card overflow-hidden">
                 <div class="card-body p-0 table-responsive">
-                    <table id="assignmentTable" class="table h-no-table table-striped">
+                    <table id="userTable" class="table h-no-table table-striped">
                         <thead>
                             <tr>
 
                              
                                 <th>Name</th>
-                                <th>Country</th>
-                             
+                                <th>Email</th>
+                                <th width="150">Role</th>
+                                <th width="150">Status</th>                             
                                 <th width="200">Actions</th>
                             </tr>
                         </thead>
@@ -250,27 +243,60 @@
 
                              
                                 <td>
-                                    <span>THE CENTRAL ISLAMIC COUNCIL OF THAILAND</span>
+                                    <span>My name is Brian</span>
                                 </td>
                                 <td>
 
 
-                                    <span>Thailand</span>
+                                    <span>brian@work.com</span>
                                 </td>
                                
-                          
-                               
+                                <td>
+                                    employee
+                                </td>
+                                <td>
+                                   <span class="h4e-inactive">Inactive</span>
+
+                                </td>
                                 <td>
                                     <div class="flex-align gap-8">
-                                        <a href="guarantee-view.html"><i class="actions view fa-solid fa-eye"></i></a>
-                                        <a href="guarantee-edit.html"><i class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <a href="view-user.html"><i class="actions view fa-solid fa-eye"></i></a>
+                                        <a href="edit-user.html"><i class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        
+                                         <button type="submit"><i class="actions delete fa-solid fa-trash-can"></i></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+                                      <tr>
+
+                             
+                                <td>
+                                    <span>John Cena</span>
+                                </td>
+                                <td>
+
+
+                                    <span>cena@work.com</span>
+                                </td>
+                               
+                                <td>
+                                    employee
+                                </td>
+                                <td>
+                                   <span class="h4e-active">Active</span>
+
+                                </td>
+                                <td>
+                                    <div class="flex-align gap-8">
+                                        <a href="view-user.html"><i class="actions view fa-solid fa-eye"></i></a>
+                                        <a href="edit-user.html"><i class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         
                                          <button type="submit"><i class="actions disDelete fa-solid fa-trash-can"></i></button>
                                     </div>
 
                                 </td>
                             </tr>
-                        
                         </tbody>
                     </table>
                 </div>
@@ -311,6 +337,39 @@
                      <span class="text-gray-300 text-13 fw-normal">By The Halal Science Center – Chulalongkorn University
                     </span>
                 </div>
+            </div>
+        </div>
+    </div>
+       <!-- delUserModal -->
+    <div class="modal fade" id="delUserModal" tabindex="-1" aria-labelledby="delUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered del-number-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title mb-0" id="delUserModalLabel">คุณแน่ใจใช่ไหม?</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-20 pt-20">
+                    <form id="editDistributorForm">
+                        <div class="mb-20">
+                            <label for="distributorName" class="form-label h6">กรุณาพิมพ์ <span class="text-main-600 m-4">u-xxx</span>และคลิกปุ่มยืนยันเพื่อทำการลบ</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control py-11" id=""
+                                    placeholder="กรุณาพิมพ์รหัสสาร..." required />
+
+                            </div>
+                        </div>
+
+
+                     <div class="modal-footer border-0 pt-0 d-flex justify-content-end">
+                    <button type="submit" class="btn bg-main-600 text-white px-24 py-12 rounded-100"
+                        id="confirmDelUser">ยืนยัน</button>
+                    <button type="button"
+                        class="btn btn-outline-danger-600 text-danger-600 hover-bg-danger-50 px-24 py-12 rounded-100"
+                        data-bs-dismiss="modal">ยกเลิก</button>
+                </div>
+                    </form>
+                </div>
+             
             </div>
         </div>
     </div>
@@ -386,21 +445,38 @@
             document.body.removeChild(a);
         }
         // ========================== Export Js End ==============================
+    $(document).ready(function () {
+            // กำหนดตัวแปรสำหรับ modal
+            var deleteHnumberModal = new bootstrap.Modal($('#delUserModal')[0]);
 
+            // เชื่อมปุ่ม "ลบ"
+            $('.actions.delete').on('click', function () {
+                deleteHnumberModal.show();
+            });
+
+            // เชื่อมปุ่ม "เพิ่ม" (#addDistriBtn) กับ modal
+
+
+            $('#confirmDelUser').on('click', function () {
+                // ... โค้ดสำหรับบันทึกข้อมูลที่นี่
+           
+                deleteHnumberModal.hide();
+            });
+        });
         // Table Header Checkbox checked all js Start
         // $('#selectAll').on('change', function () {
         //     $('.form-check .form-check-input').prop('checked', $(this).prop('checked'));
         // });
 
         // Data Tables
-        new DataTable('#assignmentTable', {
+        new DataTable('#userTable', {
             responsive: true,
             searching: false,
             lengthChange: false,
             info: false,   // Bottom Left Text => Showing 1 to 10 of 12 entries
             paging: false,
             "columnDefs": [
-                { "orderable": false, "targets": [2] } // Disables sorting on the 7th column (index 6)
+                { "orderable": false, "targets": [4] } // Disables sorting on the 7th column (index 6)
             ]
         });
     </script>

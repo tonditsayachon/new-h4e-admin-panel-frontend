@@ -78,12 +78,10 @@
                     </li>
 
 
-                    <li class="sidebar-menu__item">
-                        <span
-                            class="text-gray-300 text-sm px-20 pt-20 fw-semibold border-top border-gray-100 d-block text-uppercase">Admin</span>
+                    <li class=" border-top border-gray-100 mb-8">  
                     </li>
                     <li class="sidebar-menu__item">
-                        <a href="setting.html" class="sidebar-menu__link">
+                        <a href="manage-users.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-users"></i></span>
                             <span class="text">Manage User</span>
                         </a>
@@ -299,7 +297,7 @@
                                                 class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i
                                                 class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit" class="submitDelID"><i
+                                        <button type="button"><i
                                                 class="actions delete fa-solid fa-trash-can"></i></button>
 
                                     </div>
@@ -385,7 +383,7 @@
                                                 class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i
                                                 class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit" class="submitDelID"><i
+                                        <button type="button"><i
                                                 class="actions delete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -468,7 +466,7 @@
                                                 class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i
                                                 class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit" class="submitDelID"><i
+                                        <button type="button"><i
                                                 class="actions delete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -551,7 +549,7 @@
                                                 class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i
                                                 class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit" class="submitDelID"><i
+                                        <button type="button"><i
                                                 class="actions delete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -840,7 +838,7 @@
             var deleteHnumberModal = new bootstrap.Modal($('#delNumberModal')[0]);
 
             // เชื่อมปุ่ม "ลบ"
-            $('.submitDelID').on('click', function () {
+            $('.actions.delete').on('click', function () {
                 deleteHnumberModal.show();
             });
 

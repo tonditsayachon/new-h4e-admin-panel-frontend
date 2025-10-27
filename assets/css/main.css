@@ -9053,6 +9053,7 @@ button:focus {
 .dashboard-body {
     padding-block-start: 24px;
     padding-block-end: 24px;
+
 }
 
 .top-navbar,
@@ -9824,6 +9825,7 @@ i.halal-status.unidentify {
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+    margin-top: auto;
 }
 
 .footbar-actions .btn {
@@ -10099,6 +10101,17 @@ hr.form-separator{
 }
 .del-number-modal{
     max-width: 500px;
+}
+span.required-field{
+    color: red;
+    margin-left:4px;
+}
+
+.admin-panel-signin{
+    width: 100%;
+    max-width:600px;
+   
+
 }
 @media screen and (max-width: 767px) {
     form.h-number-filter .row{

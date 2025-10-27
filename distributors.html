@@ -78,12 +78,10 @@
                     </li>
 
 
-                    <li class="sidebar-menu__item">
-                        <span
-                            class="text-gray-300 text-sm px-20 pt-20 fw-semibold border-top border-gray-100 d-block text-uppercase">Admin</span>
+                 <li class=" border-top border-gray-100 mb-8">  
                     </li>
                     <li class="sidebar-menu__item">
-                        <a href="setting.html" class="sidebar-menu__link">
+                        <a href="manage-users.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-users"></i></span>
                             <span class="text">Manage User</span>
                         </a>
@@ -173,7 +171,7 @@
                 </div>
                 <!-- Breadcrumb End -->
             </div>
-                <h3 class="text-gray-300">Distributors</h3>
+                <h3>Distributors</h3>
             <div class="search-filter my-20">
 
                 <form action="" class="h-number-filter gap-8">
@@ -245,7 +243,7 @@
                                 <th>Name</th>
                                 <th width="300">Country</th>
                                 <th width="150">Addittives</th>
-                                <th>Actions</th>
+                                <th class="text-center">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -552,7 +550,39 @@
             </div>
         </div>
     </div>
+        <!-- delNumberModal -->
+    <div class="modal fade" id="delDistrModal" tabindex="-1" aria-labelledby="delDistrModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered del-number-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title mb-0" id="delDistrModalLabel">คุณแน่ใจใช่ไหม?</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-20 pt-20">
+                    <form id="editDistributorForm">
+                        <div class="mb-20">
+                            <label for="distributorName" class="form-label h6">กรุณาพิมพ์ <span class="text-main-600 m-4">Company name</span>และคลิกปุ่มยืนยันเพื่อทำการลบ</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control py-11" id=""
+                                    placeholder="กรุณาพิมพ์ชื่อบริษัท..." required />
 
+                            </div>
+                        </div>
+
+
+                     <div class="modal-footer border-0 pt-0 d-flex justify-content-end">
+                    <button type="submit" class="btn bg-main-600 text-white px-24 py-12 rounded-100"
+                        id="confirmDeldistri">ยืนยัน</button>
+                    <button type="button"
+                        class="btn btn-outline-danger-600 text-danger-600 hover-bg-danger-50 px-24 py-12 rounded-100"
+                        data-bs-dismiss="modal">ยกเลิก</button>
+                </div>
+                    </form>
+                </div>
+             
+            </div>
+        </div>
+    </div>
     <!-- Jquery js -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap Bundle Js -->
@@ -623,7 +653,26 @@
             a.click();
             document.body.removeChild(a);
         }
+        
         // ========================== Export Js End ==============================
+        $(document).ready(function () {
+            // กำหนดตัวแปรสำหรับ modal
+            var deleteDistrModal = new bootstrap.Modal($('#delDistrModal')[0]);
+
+            // เชื่อมปุ่ม "ลบ"
+            $('.actions.delete').on('click', function () {
+                deleteDistrModal.show();
+            });
+
+            // เชื่อมปุ่ม "เพิ่ม" (#addDistriBtn) กับ modal
+
+
+            $('#confirmDeldistri').on('click', function () {
+                // ... โค้ดสำหรับบันทึกข้อมูลที่นี่
+           
+                deleteDistrModal.hide();
+            });
+        });
 
         // Table Header Checkbox checked all js Start
         // $('#selectAll').on('change', function () {

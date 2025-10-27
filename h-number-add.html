@@ -93,14 +93,10 @@
               </a>
             </li>
 
+           <li class=" border-top border-gray-100 mb-8">  
+                    </li>
             <li class="sidebar-menu__item">
-              <span
-                class="text-gray-300 text-sm px-20 pt-20 fw-semibold border-top border-gray-100 d-block text-uppercase"
-                >Admin</span
-              >
-            </li>
-            <li class="sidebar-menu__item">
-              <a href="setting.html" class="sidebar-menu__link">
+              <a href="manage-users.html" class="sidebar-menu__link">
                 <span class="icon"><i class="fa-solid fa-users"></i></span>
                 <span class="text">Manage User</span>
               </a>
@@ -232,7 +228,7 @@
           </ul>
         </div>
 
-        <form action="#" class="h-number-form">
+        <form action="h-number-add.html" class="h-number-form needs-validation">
           <div class="card mt-24">
             <div class="card-header border-bottom">
               <div class="d-flex flex-align justify-content-between w-100">
@@ -255,7 +251,7 @@
               <div class="row">
                 <div class="col-sm-4 col-xs-4">
                   <label for="" class="form-label mb-8 h6"
-                    >E Number
+                    >E Number <span class="required-field">*</span>
                     <span class="text-gray-200 fw-normal"
                       >(กรอกรหัสสาร)</span
                     ></label
@@ -289,7 +285,7 @@
               </div>
               <div class="row">
                 <div class="col-12">
-                  <label for="" class="form-label mb-8 h6">Additive Name</label>
+                  <label for="" class="form-label mb-8 h6">Additive Name<span class="required-field">*</span></label>
                   <input
                     type="text"
                     class="form-control py-11"
@@ -302,7 +298,7 @@
               <div class="row">
                 <div class="col-sm-4 col-xs-4">
                   <label for="" class="h6 mb-8 fw-semibold font-heading"
-                    >Category</label
+                    >Category<span class="required-field">*</span></label
                   >
                   <div class="position-relative">
                     <select
@@ -324,7 +320,7 @@
                 </div>
                 <div class="col-sm-4 col-xs-4">
                   <label for="" class="h6 mb-8 fw-semibold font-heading"
-                    >Sub Category</label
+                    >Sub Category<span class="required-field">*</span></label
                   >
                   <div class="position-relative">
                     <select
@@ -346,7 +342,7 @@
                 </div>
                 <div class="col-sm-4 col-xs-4">
                   <label for="" class="h6 mb-8 fw-semibold font-heading"
-                    >Halal Status</label
+                    >Halal Status<span class="required-field">*</span></label
                   >
                   <div class="position-relative">
                     <select
@@ -375,7 +371,7 @@
               <div class="row">
                 <div class="col-sm-4 col-xs-4">
                   <label for="" class="form-label mb-8 h6"
-                    >H Number
+                    >H Number<span class="required-field">*</span>
                     <span class="text-gray-200 fw-normal"
                       >(กรอกรหัสสาร)</span
                     ></label
@@ -390,7 +386,7 @@
                 </div>
                 <div class="col-sm-4 col-xs-4">
                   <label for="" class="h6 mb-8 fw-semibold font-heading"
-                    >Category</label
+                    >Category<span class="required-field">*</span></label
                   >
                   <div class="position-relative">
                     <select
@@ -399,7 +395,7 @@
                       required
                     >
                       <option value="1" disabled="" selected="">
-                        Select Category
+                        Select Category<span class="required-field">*</span>
                       </option>
                       <option value="2">Category 1</option>
                       <option value="2">Category 2</option>
@@ -412,7 +408,7 @@
                 </div>
                 <div class="col-sm-4 col-xs-4">
                   <label for="" class="h6 mb-8 fw-semibold font-heading"
-                    >Sub Category</label
+                    >Sub Category<span class="required-field">*</span></label
                   >
                   <div class="position-relative">
                     <select
@@ -522,9 +518,9 @@
             </div>
           </div>
         </form>
+        
       </div>
-    </div>
-
+      
     <div
       class="footbar-actions d-flex justify-content-end gap-12 box-shadow-sm"
     >
@@ -533,11 +529,13 @@
         class="btn btn-outline-secondary text-danger-500 hover-text-danger-500 hover-bg-danger-100 text-15 px-24 py-12 rounded-8 hover-border-danger-600"
         >ยกเลิก</a
       >
-      <button
+      <button type="submit"
         class="btn bg-main-600 text-white hover-text-main-600 hover-bg-light-50 text-15 px-24 py-12 rounded-8 hover-border-main-600"
       >
         บันทึก
       </button>
+    </div>
+
     </div>
 
     <!-- Jquery js -->
