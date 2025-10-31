@@ -67,18 +67,34 @@
                             <span class="icon"><i class="fa-solid fa-building"></i></span>
                             <span class="text">Distributors</span>
                         </a>
-
                     </li>
-
                     <li class="sidebar-menu__item">
                         <a href="guarantee.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-file-shield"></i></span>
                             <span class="text">Guarantee</span>
                         </a>
                     </li>
-
-
-                    <li class=" border-top border-gray-100 mb-8">  
+                    <li class=" border-top border-gray-100 mb-8">
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="additive-cate.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
+                            <span class="text">Additive Category</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="halal-additive.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
+                            <span class="text">Halal Additive Category</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="halal-status.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-certificate"></i></span>
+                            <span class="text">Halal Status</span>
+                        </a>
+                    </li>
+                    <li class=" border-top border-gray-100 mb-8">
                     </li>
                     <li class="sidebar-menu__item">
                         <a href="manage-users.html" class="sidebar-menu__link">
@@ -736,25 +752,26 @@
                 <div class="modal-body p-20 pt-20">
                     <form id="editDistributorForm">
                         <div class="mb-20">
-                            <label for="distributorName" class="form-label h6">กรุณาพิมพ์ <span class="text-main-600 m-4">EXXX</span>และคลิกปุ่มยืนยันเพื่อทำการลบ</label>
+                            <label for="distributorName" class="form-label h6">กรุณาพิมพ์ <span
+                                    class="text-main-600 m-4">EXXX</span>และคลิกปุ่มยืนยันเพื่อทำการลบ</label>
                             <div class="input-group">
-                                <input type="text" class="form-control py-11" id=""
-                                    placeholder="กรุณาพิมพ์รหัสสาร..." required />
+                                <input type="text" class="form-control py-11" id="" placeholder="กรุณาพิมพ์รหัสสาร..."
+                                    required />
 
                             </div>
                         </div>
 
 
-                     <div class="modal-footer border-0 pt-0 d-flex justify-content-end">
-                    <button type="submit" class="btn bg-main-600 text-white px-24 py-12 rounded-100"
-                        id="confirmDelHnumber">ยืนยัน</button>
-                    <button type="button"
-                        class="btn btn-outline-danger-600 text-danger-600 hover-bg-danger-50 px-24 py-12 rounded-100"
-                        data-bs-dismiss="modal">ยกเลิก</button>
-                </div>
+                        <div class="modal-footer border-0 pt-0 d-flex justify-content-end">
+                            <button type="submit" class="btn bg-main-600 text-white px-24 py-12 rounded-100"
+                                id="confirmDelHnumber">ยืนยัน</button>
+                            <button type="button"
+                                class="btn btn-outline-danger-600 text-danger-600 hover-bg-danger-50 px-24 py-12 rounded-100"
+                                data-bs-dismiss="modal">ยกเลิก</button>
+                        </div>
                     </form>
                 </div>
-             
+
             </div>
         </div>
     </div>
@@ -847,7 +864,7 @@
 
             $('#confirmDelHnumber').on('click', function () {
                 // ... โค้ดสำหรับบันทึกข้อมูลที่นี่
-           
+
                 deleteHnumberModal.hide();
             });
         });

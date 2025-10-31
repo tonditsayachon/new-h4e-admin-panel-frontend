@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>View Category</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/logo/hsc-chula-new-logo.png" type="image/x-icon" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <!-- file upload -->
+    <link rel="stylesheet" href="assets/css/file-upload.css" />
+    <!-- file upload -->
+    <link rel="stylesheet" href="assets/css/plyr.css" />
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css" />
+
+    <!-- jquery Ui -->
+    <link rel="stylesheet" href="assets/css/jquery-ui.css" />
+    <!-- editor quill Ui -->
+    <link rel="stylesheet" href="assets/css/editor-quill.css" />
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+</head>
+
+<body>
+    <!--==================== Preloader Start ====================-->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!--==================== Preloader End ====================-->
+
+    <!--==================== Sidebar Overlay End ====================-->
+    <div class="side-overlay"></div>
+    <!--==================== Sidebar Overlay End ====================-->
+
+    <!-- ============================ Sidebar Start ============================ -->
+
+    <aside class="sidebar">
+        <!-- sidebar close btn -->
+        <button type="button"
+            class="sidebar-close-btn text-gray-500 hover-text-white hover-bg-main-600 text-md w-24 h-24 border border-gray-100 hover-border-main-600 d-xl-none d-flex flex-center rounded-circle position-absolute">
+            <i class="ph ph-x"></i>
+        </button>
+        <!-- sidebar close btn -->
+
+        <a href="index.html" class="sidebar__logo text-center p-16 position-sticky z-1">
+            <img src="assets/images/logo/logo.png" alt="Logo" />
+        </a>
+
+        <div class="sidebar-menu-wrapper overflow-y-auto scroll-sm">
+            <div class="p-20 pt-10">
+                <ul class="sidebar-menu">
+                    <li class="sidebar-menu__item ">
+                        <a href="h-number.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-flask"></i></span>
+                            <span class="text">H Number</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="distributors.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-building"></i></span>
+                            <span class="text">Distributors</span>
+                        </a>
+                    </li>
+
+                    <li class="sidebar-menu__item">
+                        <a href="guarantee.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-file-shield"></i></span>
+                            <span class="text">Guarantee</span>
+                        </a>
+                    </li>
+
+                                 <li class=" border-top border-gray-100 mb-8">
+                    </li>
+                    <li class="sidebar-menu__item activePage">
+                        <a href="additive-cate.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
+                            <span class="text">Additive Category</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="halal-additive.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
+                            <span class="text">Halal Additive Category</span>
+                        </a>
+                    </li>
+                           <li class="sidebar-menu__item">
+                        <a href="halal-status.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-certificate"></i></span>
+                            <span class="text">Halal Status</span>
+                        </a>
+                    </li>
+                          <li class=" border-top border-gray-100 mb-8">
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="manage-users.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-users"></i></span>
+                            <span class="text">Manage User</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <!-- ============================ Sidebar End  ============================ -->
+
+    <div class="dashboard-main-wrapper">
+        <div class="top-navbar">
+            <div class="flex-align gap-16">
+                <button type="button" class="toggle-btn d-xl-none d-flex text-26 text-gray-500">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <!-- Toggle Button Start -->
+            <div class="flex-align gap-16">
+                <div class="dropdown">
+                    <button class="users border border-gray-200 rounded-pill p-4 d-inline-block px-8 position-relative"
+                        type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="position-relative">
+                            <img src="assets/images/logo/hsc-chula-new-logo.png" alt="Image"
+                                class="h-32 w-32 rounded-circle" />
+                            <span
+                                class="activation-badge w-8 h-8 position-absolute inset-block-end-0 inset-inline-end-0"></span>
+                        </span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu--lg border-0 bg-transparent p-0">
+                        <div class="card border border-gray-100 rounded-12 box-shadow-custom">
+                            <div class="card-body">
+                                <div class="flex-align gap-8 mb-20 pb-20 border-bottom border-gray-100">
+                                    <img src="assets/images/logo/hsc-chula-new-logo.png" alt=""
+                                        class="w-54 h-54 rounded-circle" />
+                                    <div class="">
+                                        <h4 class="mb-0">Admin</h4>
+                                        <p class="fw-medium text-13 text-gray-200">
+                                            admin@h4ehalalthai.com
+                                        </p>
+                                    </div>
+                                </div>
+                                <ul class="max-h-270 overflow-y-auto scroll-sm pe-4">
+                                    <li class="mb-4">
+                                        <a href="#"
+                                            class="py-12 text-15 px-20 hover-bg-gray-50 text-gray-300 rounded-8 flex-align gap-8 fw-medium text-15">
+                                            <span class="text-2xl text-main-600 d-flex"><i
+                                                    class="fa-solid fa-gear"></i></span>
+                                            <span class="text">Account Settings</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="pt-8 border-top border-gray-100">
+                                        <a href="index.html"
+                                            class="py-12 text-15 px-20 hover-bg-danger-50 text-gray-300 hover-text-danger-600 rounded-8 flex-align gap-8 fw-medium text-15">
+                                            <span class="text-2xl text-main-600 d-flex"><i
+                                                    class="fa-solid fa-right-from-bracket"></i></span>
+                                            <span class="text">Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Toggle Button End -->
+        </div>
+        <div class="dashboard-body">
+            <!-- Breadcrumb Start -->
+            <div class="breadcrumb mb-24">
+                <ul class="flex-align gap-4">
+                    <li>
+                        <a href="index.html" class="text-gray-200 fw-normal text-15 hover-text-main-600">Home</a>
+                    </li>
+                    <li>
+                        <span class="text-gray-500 fw-normal d-flex"><i class="fa-solid fa-chevron-right"></i></span>
+                    </li>
+                    <li>
+                        <a href="additive-cate.html"
+                            class="text-gray-200 fw-normal text-15 hover-text-main-600">Additive
+                            Category</a>
+                    </li>
+                    <li>
+                        <span class="text-gray-500 fw-normal d-flex"><i class="fa-solid fa-chevron-right"></i></span>
+                    </li>
+                    <li>
+                        <span class="fw-semibold text-main-600 fw-normal text-15">View</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="h-number-form-view">
+                <div class="card mt-24">
+                    <div class="card-header border-bottom">
+                        <h3 class="text-main-600 mb-0">Colours</h3>
+                    </div>
+
+                    <div class="card-body">
+
+
+                        <div class="form-group col-12 view-only">
+                            <label for="" class="form-label h6">Category Name
+
+                            </label>
+                            <span>Colours</span>
+                        </div>
+
+                        <div class="card mt-24">
+
+
+
+                            <div class="d-block">
+                                <label for="" class="form-label mb-8 h6 flex-align">EN <i
+                                        class="desc-flag-label en"></i></label>
+                                <textarea class="form-control border-0" id="desc" rows="4" cols="50"
+                                    placeholder="Write some text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</textarea>
+                            </div>
+
+                            <div class="d-block">
+                                <label for="" class="form-label mb-8 h6 flex-align">TH <i
+                                        class="desc-flag-label th"></i></label>
+                                <textarea class="form-control border-0" id="desc" rows="4" cols="50"
+                                    placeholder="Write some text">สเตเดียมโฮมฮันนีมูน วีเจสไลด์พาสปอร์ตฮิปฮอปบาร์บีคิว แฮมเบอร์เกอร์ไคลแมกซ์ วาซาบิ ปาสเตอร์ว้าวแทงกั๊ก สแควร์บร็อคโคลีซาดิสม์คอนเซปต์สไตรค์ อาร์ติสต์ อุปการคุณคอมพ์ซีนีเพล็กซ์ อพาร์ตเมนท์ปอดแหกราเมน วาฟเฟิลการันตีแคนูแฮปปี้ลอจิสติกส์ คอรัปชั่นสงบสุขแดนเซอร์โหลยโท่ย ปิยมิตรต้าอ่วยคอมเพล็กซ์รันเวย์กระดี๊กระด๊า ดยุคซาดิสม์แบนเนอร์คำสาป เบิร์นโบรชัวร์กิมจิ ต้าอ่วยบอยคอตต์สตูดิโอ ต้าอ่วยแชมปิยอง</textarea>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mt-24 overflow-hidden">
+                    <div class="card-header p-16 flex-align justify-content-between border-bottom">
+                        <h4 class="text-gray-300">Sub Additive</h4>
+
+
+                    </div>
+                    <div class="card-body p-8 table-responsive">
+                        <table id="subAdditiveTable" class="table sub-additive-table table-striped">
+
+                            <thead>
+                                <tr>
+
+
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>E number</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+
+                                    <td>
+                                        <span>yellows</span>
+                                    </td>
+                                    <td>
+                                        <span class="description-text">Lorem Ipsum is simply dummy text of the printing
+                                            and
+                                            typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            text
+                                            ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book.</span>
+                                    </td>
+                                    <td class="text-center">
+                                        <span>2</span>
+                                    </td>
+
+
+                                    <td>
+                                        <div class="d-block">
+                                            <button type="button"><i
+                                                    class="actions edit fa-solid fa-pen-to-square"></i></button>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+
+                                    <td>
+                                        <span>oranges</span>
+                                    </td>
+                                    <td>
+
+
+                                        <span class="description-text">Lorem Ipsum is simply dummy text of the printing
+                                            and
+                                            typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            text
+                                            ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book.</span>
+
+                                    </td>
+                                    <td class="text-center">
+                                        <span>3</span>
+                                    </td>
+
+
+                                    <td>
+                                        <div class="d-block">
+                                            <button type="button"><i
+                                                    class="actions edit fa-solid fa-pen-to-square"></i></button>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>
+                                        <span>reds</span>
+                                    </td>
+                                    <td>
+
+
+                                        <span class="description-text">Lorem Ipsum is simply dummy text of the printing
+                                            and
+                                            typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            text
+                                            ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book.</span>
+
+                                    </td>
+                                    <td class="text-center">
+                                        <span>5</span>
+                                    </td>
+
+
+                                    <td>
+                                        <div class="d-block">
+                                            <button type="button"><i
+                                                    class="actions edit fa-solid fa-pen-to-square"></i></button>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+
+                                    <td>
+                                        <span>blues & violets</span>
+                                    </td>
+                                    <td>
+
+
+                                        <span class="description-text">Lorem Ipsum is simply dummy text of the printing
+                                            and
+                                            typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            text
+                                            ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book.</span>
+
+                                    </td>
+                                    <td class="text-center">
+                                        <span>1</span>
+                                    </td>
+
+
+                                    <td>
+                                        <div class="d-block">
+                                            <button type="button"><i
+                                                    class="actions edit fa-solid fa-pen-to-square"></i></button>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+
+                                    <td>
+                                        <span>greens</span>
+                                    </td>
+                                    <td>
+
+
+                                        <span class="description-text">Lorem Ipsum is simply dummy text of the printing
+                                            and
+                                            typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            text
+                                            ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book.</span>
+
+                                    </td>
+                                    <td class="text-center">
+                                        <span>
+                                            2
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+                                        <div class="d-block">
+                                            <button type="button"><i
+                                                    class="actions edit fa-solid fa-pen-to-square"></i></button>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+
+                                    <td>
+                                        <span>browns & blacks</span>
+                                    </td>
+                                    <td>
+
+
+                                        <span class="description-text">Lorem Ipsum is simply dummy text of the printing
+                                            and
+                                            typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            text
+                                            ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book.</span>
+
+                                    </td>
+                                    <td class="text-center">
+                                        <span>3</span>
+                                    </td>
+
+
+                                    <td>
+                                        <div class="d-block">
+                                            <button type="button"><i
+                                                    class="actions edit fa-solid fa-pen-to-square"></i></button>
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+
+                                    <td>
+                                        <span>gold and others</span>
+                                    </td>
+                                    <td>
+
+
+                                        <span class="description-text">Lorem Ipsum is simply dummy text of the printing
+                                            and
+                                            typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                            text
+                                            ever since the 1500s, when an unknown printer took a galley of type and
+                                            scrambled it to make a type specimen book.</span>
+
+                                    </td>
+                                    <td class="text-center">
+                                        <span>
+                                            0
+                                        </span>
+                                    </td>
+
+
+                                    <td>
+                                        <div class="d-block">
+                                            <button type="button"><i
+                                                    class="actions edit fa-solid fa-pen-to-square"></i></button>
+
+
+                                        </div>
+
+                                    </td>
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+                    </div> <!--end of card body-->
+                </div> <!-- end of table  -->
+            </div>
+
+        </div>
+        <div class="footbar-actions d-flex justify-content-start gap-12 box-shadow-sm">
+            <a href="additive-cate.html"
+                class="btn bg-main-600 text-white hover-text-main-600 hover-bg-light-50 text-15 px-24 py-12 rounded-8 hover-border-main-600">กลับ</a>
+        </div>
+    </div>
+
+      <div class="modal fade" id="editSubadditiveModal" tabindex="-1" aria-labelledby="editSubadditiveModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered edit-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title mb-0" id="editSubadditiveModalLabel">Edit: <span class="text-main-600">blues
+                            & violets</span></h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-20 pt-20">
+                    <form id="editSubadditiveForm" action="view-additive.html">
+
+                        <div class="row gap-16">
+                            <div class="form-group">
+                                <label for="" class="form-label mb-8 h6">Category Name <span
+                                        class="required-field">*</span>
+
+                                </label>
+                                <input type="text" class="form-control py-11" id="" value="blue & violets" required />
+                            </div>
+
+
+
+
+
+                            <div class="form-group">
+                                <label for="" class="form-label mb-8 h6 flex-align">Description EN <i
+                                        class="desc-flag-label en"></i></label>
+                                <textarea class="form-control" id="desc" rows="4" cols="50"
+                                    placeholder="Write some text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</textarea>
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <label for="" class="form-label mb-8 h6 flex-align">Description TH <i
+                                        class="desc-flag-label th"></i></label>
+                                <textarea class="form-control" id="desc" rows="4" cols="50"
+                                    placeholder="Write some text">เทวาสมิติเวชเวิร์คโยเกิร์ต ธรรมาแพกเกจฮัลโหล ผู้นำมาร์เก็ตสเตอริโอเบนโลเบนโตะ เครปคอลัมนิสต์ กรุ๊ป กรีนพรีเซ็นเตอร์ โฮมล็อบบี้ฮิตซิมโฟนี่ วิดีโอ บิลว่ะคาราโอเกะอมาตยาธิปไตยเฟรม แพทยสภา เยอบีราไง แอดมิสชันป๊อปมาราธอนเยลลี่ฟิวเจอร์ โมหจริตสมิติเวชเซาท์กุมภาพันธ์แฟกซ์ ฮัลโลวีนแบดมาร์เก็ตคาแร็คเตอร์ ดีพาร์ทเมนต์แตงกวาเพรียวบางราสเบอร์รี บลอนด์ครูเสดวอร์รูมออร์แกนิกเฮอร์ริเคน</textarea>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                    
+                </div>
+                <div class="modal-footer border-0 pt-0 d-flex justify-content-end">
+                    <button type="submit" class="btn bg-main-600 text-white px-24 py-12 rounded-100"
+                        id="confirmeditSubadditive">ยืนยัน</button>
+                    <button type="button"
+                        class="btn btn-outline-danger-600 text-danger-600 hover-bg-danger-50 px-24 py-12 rounded-100"
+                        data-bs-dismiss="modal">ยกเลิก</button>
+                </div>
+                    </form>
+            </div>
+        </div>
+    </div>
+    <!-- end of editSubadditiveModal -->
+    <!-- Jquery js -->
+    <script src="assets/js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap Bundle Js -->
+    <script src="assets/js/boostrap.bundle.min.js"></script>
+
+    <!-- file upload -->
+    <script src="assets/js/file-upload.js"></script>
+    <!-- file upload -->
+    <script src="assets/js/plyr.js"></script>
+    <!-- dataTables -->
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="assets/js/jquery-ui.js"></script>
+
+    <!-- main js -->
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        //pop up
+        // Modal Pop-up Control
+        $(document).ready(function () {
+            // กำหนดตัวแปรสำหรับ modal
+
+            var editSubaddModal = new bootstrap.Modal($('#editSubadditiveModal')[0]);
+
+
+
+
+
+            // เชื่อมปุ่ม "แก้ไข" (#editDistriBtn) กับ modal
+            $('.actions.edit').on('click', function () {
+                editSubaddModal.show();
+            });
+
+
+
+            $('#confirmEditDistributor').on('click', function () {
+                // ... โค้ดสำหรับบันทึกข้อมูลที่นี่
+
+                editSubaddModal.hide();
+            });
+
+
+
+            // $("#expire_date").datepicker({
+            //     position: {
+            //         my: "left bottom",    // popup’s corner
+            //         at: "left top", // input’s corner
+            //         of: "#expire_date"      // element to position relative to
+            //     }
+            // });
+        });
+
+
+        // Data Tables
+        new DataTable('#subAdditiveTable', {
+
+            searching: false,
+            lengthChange: false,
+            info: false,   // Bottom Left Text => Showing 1 to 10 of 12 entries
+            paging: false,
+            responsive: true,
+            "columnDefs": [
+                { "orderable": false, "targets": [3] },
+                { width: '40%', targets: 0 }, // Category Name
+                { width: '30%', targets: 1 }, // Status
+                { width: '10%', targets: 2, className: 'text-center' }, // E Numbers
+                { width: '10%', targets: 3, className: 'text-center' }  // Actions
+            ]
+        });
+
+    </script>
+</body>
+
+</html>

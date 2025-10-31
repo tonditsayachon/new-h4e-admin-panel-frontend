@@ -9893,20 +9893,20 @@ i.halal-status.unidentify {
 
 }
 /* form style */
-
-form.h-number-form-edit .form-check-input{
+form.h-number-form .form-check-input,div.h-number-form-view .form-check-input,form.h-number-form-edit .form-check-input{
     width: 60px;
     height: 30px;
 }
-form.h-number-form-edit .form-switch .form-check-input:checked::before {
+form.h-number-form .form-switch .form-check-input:checked::before,div.h-number-form-view .form-switch .form-check-input:checked::before,form.h-number-form-edit .form-switch .form-check-input:checked::before {
     left: calc(100% - 20px) !important;
     padding: 8px;
     
 }
-form.h-number-form-edit .form-switch .form-check-input::before{
+form.h-number-form .form-switch .form-check-input::before,div.h-number-form-view .form-switch .form-check-input::before,form.h-number-form-edit .form-switch .form-check-input::before{
     left: 6px !important;
     padding: 8px;
 }
+
 form.h-number-form-edit select{
     color: #000 !important;
 }
@@ -9939,6 +9939,7 @@ div.h-number-form-view select:disabled{
 div.h-number-form-view .view-only span{
     color: var(--bs-green);
     font-weight: 500 !important;
+ 
 }
 div.h-number-form-view .view-only a i{
     margin-right: 8px;
@@ -9948,15 +9949,38 @@ div.h-number-form-view .row>*,form.h-number-form-edit .row>*,form.h-number-form 
 
     align-content: center;
 }
-table tr:hover {
- 
-    border-top: 1px solid var(--gray-100);
-    border-bottom: 1px solid var(--gray-100);
+/* Highlight whole row on hover, excluding header rows (th) */
+table tbody tr:hover>* {
+    background-color: var(--main-50) !important;
 }
 .table-striped>tbody>tr:nth-of-type(odd)>*{
     color: #000 !important;
 }
+/* start all table style */
 
+.sub-additive-table td .description-text{
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 2 !important;    /* จำนวนบรรทัดที่จะแสดง (เช่น 5 บรรทัด)*/
+  overflow: hidden !important; 
+  text-overflow: ellipsis !important;
+  white-space: normal !important;      /* อนุญาตให้ตัดบรรทัด */
+
+}
+.modal-dialog textarea{
+    line-height: 1.4 !important;
+}
+
+
+/* Fallback สำหรับ Firefox / IE */
+@supports not (-webkit-line-clamp: 3) {
+  .sub-additive-table td .description-text {
+    display: block !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+  }
+}
 .h-no-table td a.distr {
     text-decoration: underline !important;
 }
@@ -9971,13 +9995,16 @@ table tr:hover {
     white-space: nowrap;
 }
 
-table#additiveTable tr th:last-child, table#additiveTable tr td:last-child{
-    text-align: center;
+
+
+
+table tr td:last-child{
+    height: 100% !important;
 }
 span.h4e-active {
     padding: 4px 10px;
     border-radius: 20px;
-    background-color: var(--success-50);
+    background-color: var(--success-100);
     color: var(--success-600);
     border: 1px solid var(--teal-100);
     width: 100px;
@@ -10096,8 +10123,8 @@ hr.form-separator{
 /* ================================================================= */
 /* end form style */
 
-.add-distributor-modal,.edit-distributor-modal,.view-distributor-modal {
-    max-width: 800px;
+.add-modal,.edit-modal,.view-modal {
+    max-width: 600px;
 }
 .del-number-modal{
     max-width: 500px;
@@ -10109,7 +10136,7 @@ span.required-field{
 
 .admin-panel-signin{
     width: 100%;
-    max-width:600px;
+    max-width:400px;
    
 
 }

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
-    <title> Manage Users</title>
+    <title> Manage Cate/Sub</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/hsc-chula-new-logo.png" type="image/x-icon">
     <!-- Bootstrap -->
@@ -76,17 +76,16 @@
                             <span class="text">Guarantee</span>
                         </a>
                     </li>
-
                     <li class=" border-top border-gray-100 mb-8">
                     </li>
 
-                    <li class="sidebar-menu__item">
+                    <li class="sidebar-menu__item ">
                         <a href="additive-cate.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
                             <span class="text">Additive Category</span>
                         </a>
                     </li>
-                    <li class="sidebar-menu__item">
+                    <li class="sidebar-menu__item activePage">
                         <a href="halal-additive.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
                             <span class="text">Halal Additive Category</span>
@@ -100,13 +99,12 @@
                     </li>
                     <li class=" border-top border-gray-100 mb-8">
                     </li>
-                    <li class="sidebar-menu__item activePage">
+                    <li class="sidebar-menu__item ">
                         <a href="manage-users.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-users"></i></span>
                             <span class="text">Manage User</span>
                         </a>
                     </li>
-
                 </ul>
             </div>
 
@@ -184,12 +182,12 @@
                         </li>
                         <li> <span class="text-gray-500 fw-normal d-flex"><i
                                     class="fa-solid fa-chevron-right"></i></span> </li>
-                        <li><span class="text-main-600 fw-normal text-15">Users</span></li>
+                        <li><span class="text-main-600 fw-normal text-15">Halal Additive Category</span></li>
                     </ul>
                 </div>
                 <!-- Breadcrumb End -->
             </div>
-            <h3>Manage Users</h3>
+            <h3>Halal Additive Category</h3>
             <div class="search-filter my-20">
 
                 <form action="" class="h-number-filter gap-8">
@@ -206,16 +204,7 @@
 
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="position-relative">
-                            <select id="country" class="form-select py-12 placeholder-13 text-15 border-main-600">
-                                <option value="1" selected>All Status</option>
-                                <option value="2">Active</option>
-                                <option value="3">Inactive
 
-                            </select>
-                        </div>
-                    </div>
 
                     <button type="submit" class="btn btn-main px-24 py-12"><i
                             class="fa-solid fa-magnifying-glass"></i></button>
@@ -235,26 +224,25 @@
 
 
 
-
-
-                <a href="add-user.html" class="btn btn-main px-24 py-12 align-content-center text-nowrap">
+                <a href="add-halal-additive.html" class="btn btn-main px-24 py-12 align-content-center text-nowrap">
                     <i class="fa-solid fa-plus"></i>
-                    เพิ่ม
+                    เพิ่มหมวดหมู่
                 </a>
+
+
             </div>
 
             <div class="card overflow-hidden">
                 <div class="card-body p-0 table-responsive">
-                    <table id="userTable" class="table h-no-table table-striped">
+                    <table id="subAddtitive" class="table h-no-table table-striped">
                         <thead>
                             <tr>
 
 
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th width="150">Role</th>
-                                <th width="150">Status</th>
-                                <th width="150">Actions</th>
+                                <th>Halal Category Name</th>
+                                <th>Sub Additives</th>
+                                <th class="text-center" width="200">H Numbers</th>
+                                <th>Actions</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -262,28 +250,212 @@
 
 
                                 <td>
-                                    <span>My name is Brian</span>
+                                    <span>Colours</span>
                                 </td>
                                 <td>
 
 
-                                    <span>brian@work.com</span>
+                                    <span>2</span>
                                 </td>
 
-                                <td>
-                                    employee
-                                </td>
-                                <td>
-                                    <span class="h4e-inactive">Inactive</span>
+                                <td class="text-center">
 
+
+                                    <span>2</span>
                                 </td>
+
                                 <td>
                                     <div class="flex-align gap-8">
-                                        <a href="view-user.html"><i class="actions view fa-solid fa-eye"></i></a>
-                                        <a href="edit-user.html"><i
-                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <a href="view-halal-additive.html"><i
+                                                class="actions view fa-solid fa-eye"></i></a>
 
-                                        <button type="submit"><i
+                                        <a href="edit-halal-additive.html"><i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <button type="button"><i
+                                                class="actions disDelete fa-solid fa-trash-can"></i></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+
+
+                                <td>
+                                    <span>Acids and Salts Used for Special Purposes</span>
+                                </td>
+                                <td>
+
+
+                                    <span>2</span>
+                                </td>
+
+                                <td class="text-center">
+
+
+                                    <span>1</span>
+                                </td>
+
+                                <td>
+                                    <div class="flex-align gap-8">
+                                        <a href="view-halal-additive.html"><i
+                                                class="actions view fa-solid fa-eye"></i></a>
+
+                                        <a href="edit-halal-additive.html"><i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <button type="button"><i
+                                                class="actions disDelete fa-solid fa-trash-can"></i></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+
+
+                                <td>
+                                    <span>Anitioxidants</span>
+                                </td>
+                                <td>
+
+
+                                    <span>1</span>
+                                </td>
+
+                                <td class="text-center">
+
+
+                                    <span>2</span>
+                                </td>
+
+                                <td>
+                                    <div class="flex-align gap-8">
+                                        <a href="view-halal-additive.html"><i
+                                                class="actions view fa-solid fa-eye"></i></a>
+
+                                        <a href="edit-halal-additive.html"> <i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <button type="button"><i
+                                                class="actions disDelete fa-solid fa-trash-can"></i></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+
+
+                                <td>
+                                    <span>Food Color</span>
+                                </td>
+                                <td>
+
+
+                                    <span>3</span>
+                                </td>
+                                <td class="text-center">
+
+
+                                    <span>7</span>
+                                </td>
+
+
+                                <td>
+                                    <div class="flex-align gap-8">
+                                        <a href="view-halal-additive.html"><i
+                                                class="actions view fa-solid fa-eye"></i></a>
+
+                                        <a href="edit-halal-additive.html"><i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <button type="button"><i
+                                                class="actions disDelete fa-solid fa-trash-can"></i></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+
+
+                                <td>
+                                    <span>Emulsifiers and Stabilizers</span>
+                                </td>
+                                <td>
+
+                                    <span>2</span>
+                                </td>
+
+                                <td class="text-center">
+
+
+                                    <span>1</span>
+                                </td>
+
+                                <td>
+                                    <div class="flex-align gap-8">
+                                        <a href="view-halal-additive.html"><i
+                                                class="actions view fa-solid fa-eye"></i></a>
+
+                                        <a href="edit-halal-additive.html"><i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <button type="button"><i
+                                                class="actions disDelete fa-solid fa-trash-can"></i></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+
+
+                                <td>
+                                    <span>Acids and Their Salts (in Addition to other special uses)</span>
+                                </td>
+                                <td>
+
+                                    <span>3</span>
+                                </td>
+
+                                <td class="text-center">
+
+
+                                    <span>2</span>
+                                </td>
+
+                                <td>
+                                    <div class="flex-align gap-8">
+                                        <a href="view-halal-additive.html"><i
+                                                class="actions view fa-solid fa-eye"></i></a>
+
+                                        <a href="edit-halal-additive.html"><i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <button type="button"><i
+                                                class="actions disDelete fa-solid fa-trash-can"></i></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+
+
+                                <td>
+                                    <span>Perservatives</span>
+                                </td>
+                                <td>
+
+
+                                     <span>0</span>
+                                </td>
+                                <td class="text-center">
+
+
+                                    <span>0</span>
+                                </td>
+
+                                <td>
+                                    <div class="flex-align gap-8">
+                                        <a href="view-halal-additive.html"><i
+                                                class="actions view fa-solid fa-eye"></i></a>
+
+                                        <a href="edit-halal-additive.html"><i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <button type="button"><i
                                                 class="actions delete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -293,28 +465,87 @@
 
 
                                 <td>
-                                    <span>John Cena</span>
+                                    <span>Acidity regulators, anti-caking agents</span>
                                 </td>
                                 <td>
 
 
-                                    <span>cena@work.com</span>
+                                    <span>2</span>
+                                </td>
+                                <td class="text-center">
+
+
+                                    <span>4</span>
                                 </td>
 
+
                                 <td>
-                                    employee
+                                    <div class="flex-align gap-8">
+                                        <a href="view-halal-additive.html"><i
+                                                class="actions view fa-solid fa-eye"></i></a>
+
+                                        <a href="edit-halal-additive.html"><i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <button type="button"><i
+                                                class="actions disDelete fa-solid fa-trash-can"></i></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+
+
+                                <td>
+                                    <span>Antibiotics</span>
                                 </td>
                                 <td>
-                                    <span class="h4e-active">Active</span>
 
+
+                                    <span>1</span>
+                                </td>
+                                <td class="text-center">
+
+
+                                    <span>4</span>
                                 </td>
                                 <td>
                                     <div class="flex-align gap-8">
-                                        <a href="view-user.html"><i class="actions view fa-solid fa-eye"></i></a>
-                                        <a href="edit-user.html"><i
-                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <a href="view-halal-additive.html"><i
+                                                class="actions view fa-solid fa-eye"></i></a>
 
-                                        <button type="submit"><i
+                                        <a href="edit-halal-additive.html"><i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <button type="button"><i
+                                                class="actions disDelete fa-solid fa-trash-can"></i></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+
+
+                                <td>
+                                    <span>Additional additives</span>
+                                </td>
+                                <td>
+
+                                    <span>2</span>
+                                </td>
+
+                                <td class="text-center">
+
+
+                                    <span>5</span>
+                                </td>
+
+                                <td>
+                                    <div class="flex-align gap-8">
+                                        <a href="view-halal-additive.html"><i
+                                                class="actions view fa-solid fa-eye"></i></a>
+
+                                        <a href="edit-halal-additive.html"><i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+                                        <button type="button"><i
                                                 class="actions disDelete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -363,21 +594,21 @@
             </div>
         </div>
     </div>
-    <!-- delUserModal -->
-    <div class="modal fade" id="delUserModal" tabindex="-1" aria-labelledby="delUserModalLabel" aria-hidden="true">
+    <!-- delEcateModal -->
+    <div class="modal fade" id="delEcateModal" tabindex="-1" aria-labelledby="delEcateModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered del-number-modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title mb-0" id="delUserModalLabel">คุณแน่ใจใช่ไหม?</h3>
+                    <h3 class="modal-title mb-0" id="delEcateModalLabel">คุณแน่ใจใช่ไหม?</h3>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-20 pt-20">
-                    <form id="editDistributorForm">
+                    <form action="additive-cate.html" id="editDistributorForm needs-validation" novalidate>
                         <div class="mb-20">
                             <label for="distributorName" class="form-label h6">กรุณาพิมพ์ <span
-                                    class="text-main-600 m-4">u-xxx</span>และคลิกปุ่มยืนยันเพื่อทำการลบ</label>
+                                    class="text-danger-600 m-4">Delete</span>และคลิกปุ่มยืนยันเพื่อทำการลบ</label>
                             <div class="input-group">
-                                <input type="text" class="form-control py-11" id="" placeholder="กรุณาพิมพ์รหัสสาร..."
+                                <input type="text" class="form-control py-11" id="" placeholder="กรุณาพิมพ์ Delete..."
                                     required />
 
                             </div>
@@ -471,14 +702,13 @@
         // ========================== Export Js End ==============================
         $(document).ready(function () {
             // กำหนดตัวแปรสำหรับ modal
-            var deleteHnumberModal = new bootstrap.Modal($('#delUserModal')[0]);
+            var deleteHnumberModal = new bootstrap.Modal($('#delEcateModal')[0]);
 
-            // เชื่อมปุ่ม "ลบ"
+
+
             $('.actions.delete').on('click', function () {
                 deleteHnumberModal.show();
             });
-
-            // เชื่อมปุ่ม "เพิ่ม" (#addDistriBtn) กับ modal
 
 
             $('#confirmDelUser').on('click', function () {
@@ -493,14 +723,14 @@
         // });
 
         // Data Tables
-        new DataTable('#userTable', {
+        new DataTable('#subAddtitive', {
             responsive: true,
             searching: false,
             lengthChange: false,
             info: false,   // Bottom Left Text => Showing 1 to 10 of 12 entries
             paging: false,
             "columnDefs": [
-                { "orderable": false, "targets": [4] } // Disables sorting on the 7th column (index 6)
+                { "orderable": false, "targets": [3] } // Disables sorting on the 7th column (index 6)
             ]
         });
     </script>

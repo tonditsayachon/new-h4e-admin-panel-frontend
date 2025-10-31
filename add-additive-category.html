@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Title -->
-    <title>Guarantee Details</title>
+    <title>Add new category</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/hsc-chula-new-logo.png" type="image/x-icon" />
     <!-- Bootstrap -->
@@ -45,44 +45,42 @@
     <aside class="sidebar">
         <!-- sidebar close btn -->
         <button type="button"
-            class="sidebar-close-btn text-gray-500 hover-text-white hover-bg-main-600 text-md w-24 h-24 border border-gray-100 hover-border-main-600 d-xl-none d-flex flex-center rounded-circle position-absolute"><i
-                class="ph ph-x"></i></button>
+            class="sidebar-close-btn text-gray-500 hover-text-white hover-bg-main-600 text-md w-24 h-24 border border-gray-100 hover-border-main-600 d-xl-none d-flex flex-center rounded-circle position-absolute">
+            <i class="ph ph-x"></i>
+        </button>
         <!-- sidebar close btn -->
 
         <a href="index.html" class="sidebar__logo text-center p-16 position-sticky z-1">
-            <img src="assets/images/logo/logo.png" alt="Logo">
+            <img src="assets/images/logo/logo.png" alt="Logo" />
         </a>
 
         <div class="sidebar-menu-wrapper overflow-y-auto scroll-sm">
             <div class="p-20 pt-10">
                 <ul class="sidebar-menu">
-
-                    <li class="sidebar-menu__item">
+                    <li class="sidebar-menu__item ">
                         <a href="h-number.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-flask"></i></span>
                             <span class="text">H Number</span>
-
                         </a>
-
                     </li>
-                    <li class="sidebar-menu__item ">
+                    <li class="sidebar-menu__item">
                         <a href="distributors.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-building"></i></span>
                             <span class="text">Distributors</span>
                         </a>
-
                     </li>
 
-                    <li class="sidebar-menu__item activePage">
+                    <li class="sidebar-menu__item">
                         <a href="guarantee.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-file-shield"></i></span>
                             <span class="text">Guarantee</span>
                         </a>
                     </li>
+
                     <li class=" border-top border-gray-100 mb-8">
                     </li>
-
-                    <li class="sidebar-menu__item">
+              
+                    <li class="sidebar-menu__item activePage">
                         <a href="additive-cate.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
                             <span class="text">Additive Category</span>
@@ -94,29 +92,23 @@
                             <span class="text">Halal Additive Category</span>
                         </a>
                     </li>
-                    <li class="sidebar-menu__item">
+                         <li class="sidebar-menu__item">
                         <a href="halal-status.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-certificate"></i></span>
                             <span class="text">Halal Status</span>
                         </a>
                     </li>
-                    <li class=" border-top border-gray-100 mb-8">
+                      <li class=" border-top border-gray-100 mb-8">
                     </li>
-                    <li class="sidebar-menu__item">
+                          <li class="sidebar-menu__item">
                         <a href="manage-users.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-users"></i></span>
                             <span class="text">Manage User</span>
                         </a>
                     </li>
-
-
-
-
                 </ul>
             </div>
-
         </div>
-
     </aside>
     <!-- ============================ Sidebar End  ============================ -->
 
@@ -147,7 +139,7 @@
                                     <img src="assets/images/logo/hsc-chula-new-logo.png" alt=""
                                         class="w-54 h-54 rounded-circle" />
                                     <div class="">
-                                        <h4>Admin</h4>
+                                        <h4 class="mb-0">Admin</h4>
                                         <p class="fw-medium text-13 text-gray-200">
                                             admin@h4ehalalthai.com
                                         </p>
@@ -190,61 +182,62 @@
                         <span class="text-gray-500 fw-normal d-flex"><i class="fa-solid fa-chevron-right"></i></span>
                     </li>
                     <li>
-                        <a href="guarantee.html"
-                            class="text-gray-200 fw-normal text-15 hover-text-main-600">Guarantee</a>
+                        <a href="additive-cate.html"
+                            class="text-gray-200 fw-normal text-15 hover-text-main-600">Additive Category</a>
                     </li>
                     <li>
                         <span class="text-gray-500 fw-normal d-flex"><i class="fa-solid fa-chevron-right"></i></span>
                     </li>
                     <li>
-                        <span class="fw-semibold text-main-600 fw-normal text-15">View</span>
+                        <span class="fw-semibold text-main-600 fw-normal text-15">Add new</span>
                     </li>
                 </ul>
             </div>
 
-            <div class="h-number-form-view">
+            <form action="add-additive-category.html" class="h-number-form needs-validation">
                 <div class="card mt-24">
                     <div class="card-header border-bottom">
-                        <h3 class="text-main-600 mb-0">THE CENTRAL ISLAMIC COUNCIL OF THAILAND</h3>
-                    </div>
+                        <div class="d-flex flex-align justify-content-between w-100">
+                            <h3 class="mb-16">Add new additive category</h3>
 
+                        </div>
+
+                        <p class="text-gray-600 text-15">
+                            Please fill full details about category details.
+                        </p>
+                    </div>
                     <div class="card-body">
+                        <h5 class="text-gray-300">Category Details</h5>
 
                         <div class="row">
-                            <div class="col-sm-6 col-md-8 view-only">
-                                <label for="" class="form-label h6">Name
+                            <div class="form-group">
+                                <label for="" class="form-label mb-8 h6">Category Name <span
+                                        class="required-field">*</span>
 
                                 </label>
-                                <span>THE CENTRAL ISLAMIC COUNCIL OF THAILAND</span>
+                                <input type="text" class="form-control py-11" id="" placeholder="category name..."
+                                    required />
                             </div>
-                            <div class="col-sm-6 col-md-4 view-only">
-                                <label for="" class="h6 mb-8 fw-semibold font-heading">Country</label>
-                                <span>Thailand</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 view-only">
-                                <label for="" class="form-label h6">Address</label>
-                                <span>001/001 ถนนเมืองใหม่, แขวงเมืองใหม่, กรุงเทพ 10350</span>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-sm-4 col-xs-4 view-only">
-                                <label for="" class="form-label h6">Email
-                                </label>
-                                <a href="mailto:company@world.com">company@world.com</a>
-                            </div>
-                            <div class="col-sm-4 col-xs-4 view-only">
-                                <label for="" class="form-label h6">Tel.</label>
-                                <a href="tel:+66012345678">(+66)234-5678</a>
-                            </div>
-                            <div class="col-sm-4 col-xs-4 view-only">
-                                <label for="" class="form-label h6">Google Map</label>
-                                <a class="text-nowrap" href="#" target="_blank"> <i class="fa-solid fa-link"></i>Open in
-                                    Google Map</a>
 
+
+
+                            <div class="form-group">
+                                <label for="" class="form-label mb-8 h6 flex-align">EN <i
+                                        class="desc-flag-label en"></i></label>
+                                <textarea class="form-control" id="desc" rows="4" cols="50"
+                                    placeholder="Write some text"></textarea>
                             </div>
+
+
+                            <div class="form-group">
+                                <label for="" class="form-label mb-8 h6 flex-align">TH <i
+                                        class="desc-flag-label th"></i></label>
+                                <textarea class="form-control" id="desc" rows="4" cols="50"
+                                    placeholder="Write some text"></textarea>
+                            </div>
+
+
                         </div>
 
                     </div>
@@ -252,108 +245,26 @@
                 </div>
 
 
-            </div>
-            <div class="card mt-24 overflow-hidden">
-                <div class="card-header">
-                    <h4 class="h4 flex-align"> Additive List </h4>
-                </div>
-
-                <div class="card-body p-8 table-responsive">
-
-
-                    <table id="guarantteeList" class="table h-no-table table-striped">
-                        <thead>
-                            <tr>
-                                <th width="150">E Number</th>
-                                <th width="150">H Number</th>
-                                <th>Additive Name</th>
-                                <th class="text-center" width="150">Status</th>
-                                <th width="150" class="text-center">Distributors</th>
-                                <th class="text-center">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>E 123456</td>
-                                <td>H 123456</td>
-                                <td>Sample Additive Name</td>
-                                <td class="text-center">
-                                    <i class="fa-solid fa-certificate halal-status cert"></i>
-                                </td>
-                                <td class="text-center">2</td>
-
-                                <td class="text-center">
-
-                                    <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>E 654321</td>
-                                <td>H 654321</td>
-                                <td>Another Additive Name</td>
-                                <td class="text-center">
-                                    <i class="fa-solid fa-leaf halal-status fatwa"></i>
-                                </td>
-                                <td class="text-center">1</td>
-
-                                <td class="text-center">
-                                    <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>E 789012</td>
-                                <td>H 789012</td>
-                                <td>Third Additive Name</td>
-                                <td class="text-center">
-                                    <i class="fa-solid fa-circle-question halal-status unidentify"></i>
-                                </td>
-                                <td class="text-center">4</td>
-
-                                <td class="text-center">
-                                    <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
-
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>E 345678</td>
-                                <td>H 345678</td>
-                                <td>Fourth Additive Name</td>
-                                <td class="text-center">
-                                    <i class="fa-solid fa-triangle-exclamation halal-status mushbooh"></i>
-                                </td>
-                                <td class="text-center">2</td>
-
-                                <td class="text-center">
-                                    <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
-
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </div>
-            </div>
         </div>
-        <div class="footbar-actions d-flex justify-content-start gap-12 box-shadow-sm">
-            <a href="guarantee.html"
+        <div class="footbar-actions d-flex justify-content-end gap-12 box-shadow-sm">
+            <a href="additive-cate.html"
+                class="btn btn-outline-secondary text-danger-500 hover-text-danger-500 hover-bg-danger-100 text-15 px-24 py-12 rounded-8 hover-border-danger-600">ยกเลิก</a>
+            <button type="submit"
                 class="btn bg-main-600 text-white hover-text-main-600 hover-bg-light-50 text-15 px-24 py-12 rounded-8 hover-border-main-600">
-                กลับ
-            </a>
+                บันทึก
+            </button>
         </div>
-
-
+        </form>
     </div>
-
-
-
-
     <!-- Jquery js -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap Bundle Js -->
     <script src="assets/js/boostrap.bundle.min.js"></script>
 
+    <!-- file upload -->
+    <script src="assets/js/file-upload.js"></script>
+    <!-- file upload -->
+    <script src="assets/js/plyr.js"></script>
     <!-- dataTables -->
     <script src="https://cdn.datatables.net/2.0.8/js/dataTables.min.js"></script>
 
@@ -363,23 +274,7 @@
     <!-- main js -->
     <script src="assets/js/main.js"></script>
 
-    <script>
 
-
-        // Data Tables
-        new DataTable('#guarantteeList', {
-            responsive: true,
-            searching: false,
-            lengthChange: false,
-            info: false,   // Bottom Left Text => Showing 1 to 10 of 12 entries
-            paging: false,
-            "columnDefs": [
-                { "orderable": false, "targets": [5] } // Disables sorting on the 7th column (index 6)
-            ]
-
-
-        });
-    </script>
 </body>
 
 </html>
