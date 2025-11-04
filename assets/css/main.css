@@ -9981,13 +9981,13 @@ table tbody tr:hover>* {
     white-space: nowrap !important;
   }
 }
-.h-no-table td a.distr {
+table td a.distr {
     text-decoration: underline !important;
 }
-.h-no-table td span.distr {
+table td span.distr {
     color: #000 !important;
 }
-.h-no-table td span.h-code{
+table td span.h-code{
     padding: 4px 10px;
     background-color: #17A2B8;
     border-radius: 100px;
@@ -10140,6 +10140,9 @@ span.required-field{
    
 
 }
+a.info-pop{
+    font-size: var(--font-2xl);
+}
 @media screen and (max-width: 767px) {
     form.h-number-filter .row{
         gap: 16px;
@@ -10158,4 +10161,46 @@ span.required-field{
 div.h-number-form-view .view-only span{
     width:200px
 }
+}
+/* ล็อก scroll พื้นหลังเมื่อเปิด */
+body.help-open { overflow: hidden; }
+
+/* ซ่อนด้วย hidden (อย่าบังคับ display:none ในคลาสปกติ) */
+#help-overlay[hidden] { display: none !important; }
+
+/* ชั้นคลุมพื้นหลัง */
+#help-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.48);
+  opacity: 0; transition: opacity .18s ease;
+}
+#help-overlay.is-open { opacity: 1; }
+
+/* กล่อง modal */
+#help-overlay .help-modal {
+  position: absolute; left: 50%; top: 8%;
+  transform: translate(-50%, -10px);
+  width: min(920px, 92vw);
+  height: 84vh;
+  background: #fff; border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0,0,0,.25);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  transition: transform .18s ease;
+}
+#help-overlay.is-open .help-modal {
+  transform: translate(-50%, 0);
+}
+
+/* ปุ่มปิด */
+#help-overlay .help-close {
+  position: absolute; right: .75rem; top: .5rem;
+  border: 0; background: transparent;
+  font-size: 2rem; line-height: 1; cursor: pointer;
+  color: #222;
+}
+
+/* Iframe เต็มพื้นที่ภายใน */
+#help-iframe {
+  flex: 1; width: 100%; border: 0; display: block;
 }

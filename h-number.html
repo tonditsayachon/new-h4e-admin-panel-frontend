@@ -7,12 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Title -->
     <title> H Number</title>
+
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/logo/hsc-chula-new-logo.png" type="image/x-icon">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 
-
+  
     <!-- DataTables -->
     <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.min.css">
 
@@ -187,7 +188,13 @@
                 </div>
                 <!-- Breadcrumb End -->
             </div>
-            <h3>H Numbers</h3>
+            <div class="flex-align gap-8 align-content-center">
+                    <h3 class="mb-0">H Numbers</h3>
+                     <a class="info-pop" data-help-topic="h-number" href="#"><i class="fa-solid fa-circle-info"></i></a>
+                   
+
+            </div>
+        
             <div class="search-filter my-20">
 
                 <form action="" class="h-number-filter gap-8">
@@ -261,8 +268,8 @@
             </div>
 
             <div class="card overflow-hidden">
-                <div class="card-body p-0 table-responsive">
-                    <table id="assignmentTable" class="table h-no-table table-striped">
+                <div class="card-body p-8 table-responsive">
+                    <table id="assignmentTable" class="table table-striped">
                         <thead>
                             <tr>
 
@@ -357,7 +364,7 @@
                                                 class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i
                                                 class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit" class="submitDelID" disabled><i
+                                        <button type="submit"  disabled><i
                                                 class="actions disDelete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -440,7 +447,7 @@
                                                 class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i
                                                 class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit" class="submitDelID" disabled><i
+                                        <button type="submit"  disabled><i
                                                 class="actions disDelete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -523,7 +530,7 @@
                                                 class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i
                                                 class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit" class="submitDelID" disabled><i
+                                        <button type="submit"  disabled><i
                                                 class="actions disDelete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -607,7 +614,7 @@
                                                 class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i
                                                 class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit" class="submitDelID" disabled><i
+                                        <button type="submit"  disabled><i
                                                 class="actions disDelete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -649,7 +656,7 @@
                                                 class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i
                                                 class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit" class="submitDelID" disabled><i
+                                        <button type="submit"  disabled><i
                                                 class="actions disDelete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -691,7 +698,7 @@
                                                 class="actions edit fa-solid fa-pen-to-square"></i></a>
                                         <a href="h-number-distr.html"><i
                                                 class="actions distr fa-solid fa-building"></i></a>
-                                        <button type="submit" class="submitDelID" id="deleteHnumberBtn" disabled><i
+                                        <button type="submit"  id="deleteHnumberBtn" disabled><i
                                                 class="actions disDelete fa-solid fa-trash-can"></i></button>
                                     </div>
 
@@ -789,7 +796,7 @@
     <!-- jQuery UI -->
     <script src="assets/js/jquery-ui.js"></script>
 
-
+    <script src="assets/js/help-info.js"> </script>
     <!-- main js -->
     <script src="assets/js/main.js"></script>
 
