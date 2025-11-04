@@ -3,8 +3,10 @@
   // ==============================
   // CONFIG
   // ==============================
-  var USE_QUERY_MODE = true;                 // true: ใช้หน้าเดียว + ?topic=..., false: map เป็นไฟล์แยกใน switch
-  var HELP_BASE = '/help/index.html';        // ใช้เมื่อ USE_QUERY_MODE = true
+  var USE_QUERY_MODE = false;                 // true: ใช้หน้าเดียว + ?topic=..., false: map เป็นไฟล์แยกใน switch
+ 
+  // ใช้เมื่อ USE_QUERY_MODE = true
+  // var HELP_BASE = '/help/index.html';       
   var PANEL_ID = 'help-overlay';
   var IFRAME_ID = 'help-iframe';
   var CLOSE_BTN_SEL = '.help-close';
@@ -143,14 +145,17 @@
     // โหมดไฟล์แยก
     switch (t) {
       case 'h-number':
-        return '/help/h-number.html';
-      case 'g-number':
-        return '/help/g-number.html';
-      case 'warranty':
-        return '/help/warranty.html';
-      // --- เพิ่ม case อื่นตามต้องการ ---
+        return '/info/h-number-info.html';
+      case 'additive-cate':
+        return '/info/additive-cate-info.html';
+      case 'halal-additive-cate':
+        return '/info/halal-add-cate.html';
+      case 'guarantee':
+        return '/info/guarantee-info.html';
+      case 'distributors-info':
+        return '/info/distributors-info.html';
       default:
-        return '/help/default.html';
+        return '/info/default.html';
     }
   }
 
