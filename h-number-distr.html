@@ -79,34 +79,34 @@
                         </a>
                     </li>
 
-            <li class=" border-top border-gray-100 mb-8">  
+                    <li class=" border-top border-gray-100 mb-8">
                     </li>
-             <li class="sidebar-menu__item">
+                    <li class="sidebar-menu__item">
                         <a href="additive-cate.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
                             <span class="text">Additive Category</span>
                         </a>
                     </li>
-                      <li class="sidebar-menu__item">
+                    <li class="sidebar-menu__item">
                         <a href="halal-additive.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-folder-open"></i></span>
                             <span class="text">Halal Additive Category</span>
                         </a>
                     </li>
-                           <li class="sidebar-menu__item">
+                    <li class="sidebar-menu__item">
                         <a href="halal-status.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-certificate"></i></span>
                             <span class="text">Halal Status</span>
                         </a>
                     </li>
-           <li class=" border-top border-gray-100 mb-8">  
+                    <li class=" border-top border-gray-100 mb-8">
                     </li>
-            <li class="sidebar-menu__item">
-              <a href="manage-users.html" class="sidebar-menu__link">
-                <span class="icon"><i class="fa-solid fa-users"></i></span>
-                <span class="text">Manage User</span>
-              </a>
-            </li>
+                    <li class="sidebar-menu__item">
+                        <a href="manage-users.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-users"></i></span>
+                            <span class="text">Manage User</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -184,8 +184,8 @@
                         <span class="text-gray-500 fw-normal d-flex"><i class="fa-solid fa-chevron-right"></i></span>
                     </li>
                     <li>
-                        <a href="h-number.html" class="text-gray-200 fw-normal text-15 hover-text-main-600">H
-                            Numbers</a>
+                        <a href="h-number.html"
+                            class="text-gray-200 fw-normal text-15 hover-text-main-600">Additives</a>
                     </li>
                     <li>
                         <span class="text-gray-500 fw-normal d-flex"><i class="fa-solid fa-chevron-right"></i></span>
@@ -202,7 +202,7 @@
                         <h3 class="text-main-600 mb-0">E100</h3>
                     </div>
                     <div class="card-body">
-                  
+
                         <div class="row">
                             <div class="col-sm-4 col-xs-4 view-only">
                                 <label for="" class="form-label h6">E Number</label>
@@ -595,13 +595,24 @@
         <div class="modal-dialog modal-dialog-centered add-modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title mb-0" id="addNewDistributorModalLabel">Add new distributors</h3>
+                       <div>
+                    <h3 class="modal-title mb-16" id="addNewDistributorModalLabel">Add new distributors</h3>
+                        <div class="status-switch flex-align gap-8">
+                            <span class="h6 m-0">Status:</span>
+                            <div class="form-switch switch-primary d-flex align-items-center gap-8">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switch7" checked="" />
+                                <label class="form-check-label line-height-1 fw-medium text-gray-200"
+                                    for="switch7">Publish</label>
+                            </div>
+                        </div>
+                    </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body p-20 pt-20">
                     <form id="addDistributorForm">
                         <div class="mb-20">
-                            <label for="distributorName" class="form-label h6">Distributor<span class="required-field">*</span></label>
+                            <label for="distributorName" class="form-label h6">Distributor<span
+                                    class="required-field">*</span></label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="distributorName" placeholder="Search">
                                 <span class="input-group-text bg-white border-gray-100"
@@ -640,7 +651,8 @@
                         </div>
 
                         <div class="mb-20">
-                            <label for="guaranteeBy" class="form-label h6">Guarantee by<span class="required-field">*</span></label>
+                            <label for="guaranteeBy" class="form-label h6">Guarantee by<span
+                                    class="required-field">*</span></label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="guaranteeBy" placeholder="Search">
                                 <span class="input-group-text bg-white border-gray-100"
@@ -666,9 +678,8 @@
                             </div>
 
                             <div class="col-md-6">
-                                
-                                <label for="expireDate"
-                                    class="form-label h6 d-block">Expire Date</label>
+
+                                <label for="expireDate" class="form-label h6 d-block">Expire Date</label>
                                 <div class=" position-relative">
                                     <input class="form-control radius-8 bg-base" id="expire_date" type="date">
                                     <span
@@ -696,12 +707,25 @@
         <div class="modal-dialog modal-dialog-centered edit-modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title mb-0" id="editDistributorModalLabel">Edit: <span class="text-main-600">Sample
-                            Company</span></h3>
+                    <div>
+                        <h3 class="modal-title mb-16" id="editDistributorModalLabel">Edit: <span
+                                class="text-main-600">Sample
+                                Company</span></h3>
+                        <div class="status-switch flex-align gap-8">
+                            <span class="h6 m-0">Status:</span>
+                            <div class="form-switch switch-primary d-flex align-items-center gap-8">
+                                <input class="form-check-input" type="checkbox" role="switch" id="switch7" checked="" />
+                                <label class="form-check-label line-height-1 fw-medium text-gray-200"
+                                    for="switch7">Publish</label>
+                            </div>
+                        </div>
+                    </div>
+
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
                 </div>
                 <div class="modal-body p-20 pt-20">
-                    <form id="editDistributorForm">
+                    <form id="editDistributorForm" class="h-number-form-edit">
                         <div class="mb-20">
                             <label for="distributorName" class="form-label h6">Distributor</label>
                             <div class="input-group">
@@ -733,7 +757,8 @@
                             <hr class="form-separator mb-20">
                         </div>
                         <div class="mb-20">
-                            <label for="guaranteeBy" class="form-label h6">Guarantee by<span class="required-field">*</span></label>
+                            <label for="guaranteeBy" class="form-label h6">Guarantee by<span
+                                    class="required-field">*</span></label>
                             <div class="input-group">
                                 <input type="text" class="form-control" id="guaranteeBy" placeholder="Search"
                                     value="THE CENTRAL ISLAMIC COUNCIL OF THAILAND">
@@ -763,8 +788,7 @@
                             </div>
 
                             <div class="col-md-6">
-                                <label for="expireDate"
-                                    class="form-label h6 d-block">Expire Date</label>
+                                <label for="expireDate" class="form-label h6 d-block">Expire Date</label>
                                 <div class=" position-relative">
                                     <input class="form-control radius-8 bg-base" id="expire_date" type="date">
                                     <span
@@ -840,20 +864,20 @@
                             <label for="" class="form-label h6 d-block">Country</label>
                             <span class="text-gray-500">Thailand</span>
                         </div>
-                                 <div class="row">
+                        <div class="row">
                             <div class="col-6 ">
                                 <label for="" class="form-label h6 d-block">Halal Code</label>
-                                        <span>0102030405</span>
-                                        <!-- กรณีไม่มีข้อมูล -->
-                                        <!-- <span class="text-gray-400">-- No Data --</span> -->
+                                <span>0102030405</span>
+                                <!-- กรณีไม่มีข้อมูล -->
+                                <!-- <span class="text-gray-400">-- No Data --</span> -->
 
                             </div>
 
                             <div class="col-md-6">
                                 <label for="expireDate" class="form-label h6 d-block">Expire Date</label>
                                 <span>01/01/2029</span>
-                                     <!-- กรณีไม่มีข้อมูล -->
-                                     <!-- <span class="text-gray-400">-- No Data --</span> -->
+                                <!-- กรณีไม่มีข้อมูล -->
+                                <!-- <span class="text-gray-400">-- No Data --</span> -->
                             </div>
                         </div>
                     </form>

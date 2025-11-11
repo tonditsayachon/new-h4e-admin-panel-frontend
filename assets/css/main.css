@@ -9893,16 +9893,16 @@ i.halal-status.unidentify {
 
 }
 /* form style */
-form.h-number-form .form-check-input,div.h-number-form-view .form-check-input,form.h-number-form-edit .form-check-input{
+.status-switch .form-check-input{
     width: 60px;
     height: 30px;
 }
-form.h-number-form .form-switch .form-check-input:checked::before,div.h-number-form-view .form-switch .form-check-input:checked::before,form.h-number-form-edit .form-switch .form-check-input:checked::before {
+.status-switch .form-switch .form-check-input:checked::before {
     left: calc(100% - 20px) !important;
     padding: 8px;
     
 }
-form.h-number-form .form-switch .form-check-input::before,div.h-number-form-view .form-switch .form-check-input::before,form.h-number-form-edit .form-switch .form-check-input::before{
+.status-switch .form-switch .form-check-input::before{
     left: 6px !important;
     padding: 8px;
 }
