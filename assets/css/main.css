@@ -10143,6 +10143,14 @@ span.required-field{
 a.info-pop{
     font-size: var(--font-2xl);
 }
+.slug span{
+    font-size: var(--font-lg);
+    color: var(--gray-500);
+}
+.slug input{
+    width: 50%;
+    padding: 4px;
+}
 @media screen and (max-width: 767px) {
     form.h-number-filter .row{
         gap: 16px;
