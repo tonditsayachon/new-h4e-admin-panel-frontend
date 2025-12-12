@@ -842,7 +842,7 @@ table.dataTable thead>tr>th.dt-ordering-desc span.dt-column-order:after,
 table.dataTable thead>tr>td.dt-orderable-desc span.dt-column-order:after,
 table.dataTable thead>tr>td.dt-ordering-desc span.dt-column-order:after {
  content: "\f0dd" !important; /* custom sorting  */
-  font-family: "FontAwesome" !important; /* หรือชื่อฟอนต์ที่ถูกต้องของคุณ */
+  font-family: "FontAwesome" !important; 
     color: var(--gray-400) !important;
     font-size: 16px !important;
     opacity: 0.4;
@@ -853,7 +853,7 @@ table.dataTable thead>tr>td.dt-orderable-asc span.dt-column-order:before,
 table.dataTable thead>tr>td.dt-ordering-asc span.dt-column-order:before {
 
       content: "\f0de" !important; /* custom sorting  */
-  font-family: "FontAwesome" !important; /* หรือชื่อฟอนต์ที่ถูกต้องของคุณ */
+  font-family: "FontAwesome" !important; 
     color: var(--gray-400) !important;
     font-size: 16px !important;
     opacity: 0.4;
@@ -1057,145 +1057,7 @@ table.dataTable>thead>tr>td {
 }
 
 /* ===================== Editor Css End ====================== */
-/* =========================== Pricing Plan Css Start ======================= */
-.plan-item {
-    padding: 24px 32px;
-}
 
-@media screen and (max-width: 1199px) {
-    .plan-item {
-        padding: 24px 16px;
-    }
-}
-
-.plan-item:hover {
-    border-color: var(--main-600) !important;
-}
-
-.plan-item.active {
-    background-color: var(--main-50) !important;
-    border-color: var(--main-200) !important;
-}
-
-.plan-item.active .border-gray-100 {
-    border-color: var(--main-300) !important;
-}
-
-.plan-item.active:hover {
-    border-color: var(--main-600) !important;
-}
-
-.plan-badge {
-    clip-path: polygon(6% 0, 100% 0, 100% 50%, 100% 100%, 6% 100%, 0% 50%);
-}
-
-/* =========================== Pricing Plan Css End ======================= */
-/* ================================ Apex Charts Css Start =================================== */
-/* Home One Widget Chart Css Start*/
-.remove-tooltip-title .apexcharts-tooltip-title {
-    display: none;
-}
-
-.rounded-tooltip-value .apexcharts-tooltip.apexcharts-theme-light {
-    background: hsl(var(--white));
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.rounded-tooltip-value .apexcharts-tooltip-text-y-label {
-    display: none;
-}
-
-.rounded-tooltip-value .apexcharts-tooltip-marker {
-    display: none;
-}
-
-.rounded-tooltip-value .apexcharts-tooltip-text-y-value {
-    margin-left: 0;
-}
-
-.rounded-tooltip-value .apexcharts-tooltip-text {
-    display: flex;
-}
-
-/* Home One Widget Chart Css End*/
-/* Tooltip Css */
-.tooltip-style .apexcharts-tooltip {
-    padding: 0.75rem 0.5rem;
-    background-color: var();
-    border: 0;
-    background-color: var(--white);
-}
-
-.tooltip-style .apexcharts-tooltip-title {
-    padding: 0 !important;
-    background-color: transparent !important;
-    font-size: 0.875rem !important;
-    color: var(--text-primary-light) !important;
-    font-weight: 600 !important;
-    border: none !important;
-}
-
-.tooltip-style .apexcharts-tooltip-series-group {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    padding: 0 !important;
-}
-
-.tooltip-style .apexcharts-tooltip-series-group .apexcharts-tooltip-y-group {
-    padding: 0 !important;
-}
-
-.tooltip-style .apexcharts-tooltip-series-group .apexcharts-tooltip-z-group {
-    display: none !important;
-}
-
-.apexcharts-text {
-    fill: var(--gray-300) !important;
-    font-family: var(--body-font) !important;
-}
-
-#radialMultipleBar .apexcharts-text {
-    fill: var(--gray-600) !important;
-    font-size: 16px;
-}
-
-#radialMultipleBar .apexcharts-text.apexcharts-datalabel-label {
-    display: none;
-}
-
-#radialMultipleBar .apexcharts-datalabels-group {
-    transform: translateY(-24px);
-}
-
-.apexcharts-tooltip-z-group {
-    display: none;
-}
-
-.apexcharts-pie-series path {
-    stroke: #fff !important;
-}
-
-#activityDonutChart .apexcharts-text {
-    fill: hsl(var(--white)) !important;
-}
-
-.apexcharts-inner {
-    position: relative;
-    padding-left: 35px !important;
-    margin-left: 20px !important;
-}
-
-.y-value-left .apexcharts-yaxis {
-    transform: translateX(10px);
-}
-
-/* ================================ Apex Charts Css End =================================== */
 /* ======================= Common Table Css Start ======================= */
 .table-list>span {
     position: relative;
@@ -9817,8 +9679,10 @@ i.halal-status.unidentify {
 
 .footbar-actions {
     padding: 10px 16px;
-    position: sticky;
+    position: fixed;
     bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: hsl(var(--white));
     border-top: 1px solid var(--gray-100);
     display: flex;
@@ -9826,6 +9690,7 @@ i.halal-status.unidentify {
     align-items: center;
     z-index: 1;
     margin-top: auto;
+
 }
 
 .footbar-actions .btn {
@@ -9859,25 +9724,25 @@ i.halal-status.unidentify {
 
 /* ============================ Image Upload Custom Css Start ==================== */
 
-/* กำหนดขนาดของภาพตัวอย่างแต่ละภาพ */
+
 .image-preview-wrapper {
-    width: 100px; /* ขนาดตามที่คุณต้องการ */
+    width: 100px; 
     height: 100px;
-    /* position-relative เพื่อให้ปุ่มลบอ้างอิงตำแหน่งได้ */
+
     position: relative; 
     border-radius: 8px;
 }
 
-/* องค์ประกอบจริงที่แสดงภาพ (ใช้ background-image) */
+
 .image-preview-item {
     width: 100%;
     height: 100%;
     border-radius: inherit;
 }
 
-/* ปรับปุ่มลบให้ดูดีขึ้น */
+
 .image-upload__deleteBtn {
-    /* ใช้ค่าจาก theme css ของคุณ: inset-inline-end: -6px; inset-block-start: -6px; */
+
     inset-inline-end: -6px; 
     inset-block-start: -6px;
 }
@@ -9961,10 +9826,10 @@ table tbody tr:hover>* {
 .sub-additive-table td .description-text{
   display: -webkit-box !important;
   -webkit-box-orient: vertical !important;
-  -webkit-line-clamp: 2 !important;    /* จำนวนบรรทัดที่จะแสดง (เช่น 5 บรรทัด)*/
+  -webkit-line-clamp: 2 !important;  
   overflow: hidden !important; 
   text-overflow: ellipsis !important;
-  white-space: normal !important;      /* อนุญาตให้ตัดบรรทัด */
+  white-space: normal !important;    
 
 }
 .modal-dialog textarea{
@@ -9972,7 +9837,7 @@ table tbody tr:hover>* {
 }
 
 
-/* Fallback สำหรับ Firefox / IE */
+/* Fallback Firefox / IE */
 @supports not (-webkit-line-clamp: 3) {
   .sub-additive-table td .description-text {
     display: block !important;
@@ -10025,46 +9890,46 @@ span.h4e-inactive {
 
 /* ============================ Gallery Preview Styles ==================== */
 
-/* กำหนดขนาดและรูปร่างของภาพตัวอย่างแต่ละภาพ */
+
 .image-preview-item-wrapper {
-    /* ใช้ชื่อ class ที่เหมาะสมกับภาพแต่ละภาพ */
-  width: 200px; /* ขนาดที่ต้องการให้ภาพย่อแสดง */
+
+  width: 200px; 
     height: 200px;
-    position: relative; /* <--- สำคัญ: กำหนดให้เป็น relative */
-    overflow: hidden; /* ซ่อนส่วนที่เกินขอบเขต */
+    position: relative; 
+    overflow: hidden; 
     border-radius: 8px;
-    border: 1px solid var(--gray-100); /* เพิ่มเส้นขอบเพื่อความชัดเจน */
+    border: 1px solid var(--gray-100);
     transition: box-shadow 0.2s linear;
     background: rgb(139 139 139 / 15%)
 }
 
 .image-preview-item-wrapper:hover {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เพิ่มเงาเมื่อโฮเวอร์ */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 }
 
-/* รูปภาพจริงภายในกรอบ */
+
 .image-preview-item-wrapper img.image-preview {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* ครอบคลุมพื้นที่โดยไม่บิดเบี้ยว */
+    object-fit: contain; 
     display: block;
 }
 div#multiImagePreviewContainer{
     margin-bottom: 16px;
     background-color: transparent !important;
 }
-/* สไตล์สำหรับปุ่มลบ (X) */
+
 .btn-close-preview {
 
-    position: absolute; /* <--- สำคัญ: กำหนดให้เป็น absolute */
-    top: 0px; /* <--- จัดให้ชิดขอบด้านบน */
-    right: 0px; /* <--- จัดให้ชิดขอบด้านขวา */
+    position: absolute; 
+    top: 0px;
+    right: 0px; 
     
-    /* สไตล์ปุ่ม */
+ 
     width: 20px;
     height: 20px;
-    border-radius: 0 8px 0 8px; /* <--- ปรับให้มีขอบโค้งเฉพาะมุมบนขวา */
-    background-color: var(--danger-600) !important; /* สีแดงจาก theme ของคุณ */
+    border-radius: 0 8px 0 8px; 
+    background-color: var(--danger-600) !important; 
     color: white !important;
     font-size: 10px;
     padding: 0;
@@ -10072,9 +9937,9 @@ div#multiImagePreviewContainer{
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* อาจจะลบได้ถ้าไม่ต้องการเงา */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); 
     transition: transform 0.2s linear;
-    z-index: 10; /* <--- สำคัญ: ให้ปุ่มอยู่เหนือรูปภาพ */
+    z-index: 10; 
 }
 
 .btn-close-preview:hover {
@@ -10083,36 +9948,36 @@ div#multiImagePreviewContainer{
 
 
 
-/* ปรับแก้โครงสร้างคอนเทนเนอร์อัปโหลดไฟล์เดิม เพื่อให้ใช้พื้นที่ได้ดีขึ้น */
+
 .fileUpload.image-upload {
-    height: unset; /* ให้สูงตามเนื้อหา */
-    min-height: 150px; /* กำหนดความสูงขั้นต่ำ */
+    height: unset; 
+    min-height: 150px; 
 }
 
 
 /* ============================ Add Image Button Styles ==================== */
 
-/* ใช้คลาสหลักของ Thumbnail เพื่อให้มีขนาดเท่ากัน */
+
 .image-preview-item-wrapper.add-image-button {
-    /* สืบทอดขนาดจาก .image-preview-item-wrapper (100x100px) */
+
     display: flex;
-    justify-content: center; /* จัดให้ + อยู่ตรงกลางแนวนอน */
-    align-items: center; /* จัดให้ + อยู่ตรงกลางแนวตั้ง */
+    justify-content: center; 
+    align-items: center; 
     cursor: pointer; 
-    border: 2px dashed var(--gray-300) !important; /* เส้นประ */
+    border: 2px dashed var(--gray-300) !important;
     transition: all 0.2s;
-    background-color: var(--white); /* อาจใส่สีขาวเล็กน้อยเพื่อความชัดเจน */
+    background-color: var(--white); 
 }
 
 .image-preview-item-wrapper.add-image-button:hover {
     background-color: var(--gray-50); 
-    border-color: var(--primary-600) !important; /* เปลี่ยนสีเส้นประเมื่อโฮเวอร์ */
+    border-color: var(--primary-600) !important; 
 }
 
-/* จัดสีและขนาดของไอคอนบวก */
+
 .image-preview-item-wrapper.add-image-button .fa-plus {
     color: var(--gray-500); 
-    font-size: 1.5rem; /* ปรับขนาดให้ใหญ่ขึ้น */
+    font-size: 1.5rem; 
 }
 hr.form-separator{
     border-top: 1px solid #5e5e5e;
@@ -10154,6 +10019,154 @@ a.info-pop{
 .card-body .title{
     margin-bottom: 16px;
 }
+div.dt-container .dt-paging .dt-paging-button:hover {
+    color: #000 !important;
+}
+
+.dt-paging-button {
+       font-size: 16px !important;
+	white-space:nowarp !important;
+
+}
+
+
+div.dt-container .dt-paging .ellipsis {
+    padding: 10px 1em !important;
+}
+
+body.help-open { overflow: hidden; }
+
+
+#help-overlay[hidden] { display: none !important; }
+
+
+#help-overlay {
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(0,0,0,.48);
+  opacity: 0; transition: opacity .18s ease;
+}
+#help-overlay.is-open { opacity: 1; }
+
+
+#help-overlay .help-modal {
+  position: absolute; left: 50%; top: 8%;
+  transform: translate(-50%, -10px);
+  width: min(920px, 92vw);
+  height: 84vh;
+  background: #fff; border-radius: 12px;
+  box-shadow: 0 12px 36px rgba(0,0,0,.25);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  transition: transform .18s ease;
+}
+#help-overlay.is-open .help-modal {
+  transform: translate(-50%, 0);
+}
+
+
+#help-overlay .help-close {
+  position: absolute; right: .75rem; top: .5rem;
+  border: 0; background: transparent;
+  font-size: 2rem; line-height: 1; cursor: pointer;
+  color: #222;
+}
+
+
+#help-iframe {
+  flex: 1; width: 100%; border: 0; display: block;
+}
+
+.halal-status.s01,.halal-status.fatwa{
+    background-color:var(--success-600);
+}
+
+.halal-status.s02, .halal-status.cert{
+    background-color: var(--warning-600);
+}
+
+
+.halal-status.s03, .halal-status.mushbooh{
+    background-color: var(--danger-500);
+}
+
+.halal-status.s04, .halal-status.unidentify{
+    background-color: var(--gray-200);
+}
+    
+
+.halal-status {
+    color: #fff;
+    font-size: 20px;
+    border-radius: 100px;
+    align-content: center;
+    text-align:center;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 2px 6px rgb(187 187 187);
+}
+
+.empty-25{
+min-height: 1rem;    
+width: 25%;
+border-bottom: 1px dashed #91c5ad;
+display:block;
+color:#198754;
+}
+.empty-50{
+min-height: 1rem;
+width: 50%;
+border-bottom: 1px dashed #91c5ad;
+display:block;
+color:#198754;
+}
+.empty-75{
+min-height: 1rem;
+width: 75%;
+border-bottom: 1px dashed #91c5ad;
+display:block;
+color:#198754;
+}
+.empty-100{
+min-height: 1rem;
+width: 100%;
+border-bottom: 1px dashed #91c5ad;
+display:block;
+color:#198754;
+}
+.notice-box{
+    display: block;
+    text-align: center;
+    padding: 20px 40px;
+    background-color: var(--gray-100);
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+}
+.modal-body label.form-label{
+    width: unset !important;
+}
+.json-display {
+
+  width: 100%;
+  min-height: 300px;   
+  resize: vertical;      
+
+  background-color: #1e1e1e; 
+  color: #d4d4d4;         
+  border: 1px solid #333;   
+  border-radius: 8px;       
+  
+ 
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;         
+  
+
+  padding: 20px;
+  white-space: pre;         
+  overflow-x: auto;         
+  outline: none;           
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.5); 
+}
 @media screen and (max-width: 767px) {
     form.h-number-filter .row{
         gap: 16px;
@@ -10172,46 +10185,23 @@ a.info-pop{
 div.h-number-form-view .view-only span{
     width:200px
 }
-}
-/* ล็อก scroll พื้นหลังเมื่อเปิด */
-body.help-open { overflow: hidden; }
 
-/* ซ่อนด้วย hidden (อย่าบังคับ display:none ในคลาสปกติ) */
-#help-overlay[hidden] { display: none !important; }
-
-/* ชั้นคลุมพื้นหลัง */
-#help-overlay {
-  position: fixed; inset: 0; z-index: 9999;
-  background: rgba(0,0,0,.48);
-  opacity: 0; transition: opacity .18s ease;
-}
-#help-overlay.is-open { opacity: 1; }
-
-/* กล่อง modal */
-#help-overlay .help-modal {
-  position: absolute; left: 50%; top: 8%;
-  transform: translate(-50%, -10px);
-  width: min(920px, 92vw);
-  height: 84vh;
-  background: #fff; border-radius: 12px;
-  box-shadow: 0 12px 36px rgba(0,0,0,.25);
-  display: flex; flex-direction: column;
-  overflow: hidden;
-  transition: transform .18s ease;
-}
-#help-overlay.is-open .help-modal {
-  transform: translate(-50%, 0);
+span.empty{
+border-bottom: 1px dashed #198754;
+width: 150px;
+display:block;
 }
 
-/* ปุ่มปิด */
-#help-overlay .help-close {
-  position: absolute; right: .75rem; top: .5rem;
-  border: 0; background: transparent;
-  font-size: 2rem; line-height: 1; cursor: pointer;
-  color: #222;
+/* Description Text Styling */
+.description-text {
+    display: block;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-/* Iframe เต็มพื้นที่ภายใน */
-#help-iframe {
-  flex: 1; width: 100%; border: 0; display: block;
 }
+
+
