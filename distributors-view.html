@@ -72,7 +72,7 @@
           <li class="sidebar-menu__item">
             <a href="guarantee.html" class="sidebar-menu__link">
               <span class="icon"><i class="fa-solid fa-file-shield"></i></span>
-              <span class="text">Guarantee</span>
+              <span class="text">Certification Body</span>
             </a>
           </li>
           <li class=" border-top border-gray-100 mb-8">
@@ -191,10 +191,12 @@
         <div class="card mt-24">
           <div class="card-header border-bottom">
             <h3 class="text-main-600">Sample Company</h3>
-             <div class="slug flex-align gap-4">
-                <a href="https://h4e.halalthai.com/a-company" target="_blank">https://h4e.halalthai.com/distributors/a-company<i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-              
-              </div>
+            <div class="slug flex-align gap-4">
+              <a href="https://h4e.halalthai.com/a-company"
+                target="_blank">https://h4e.halalthai.com/distributors/a-company<i
+                  class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+            </div>
           </div>
 
           <div class="card-body">
@@ -266,7 +268,12 @@
         </div>
         <div class="card mt-24 overflow-hidden">
           <div class="card-header">
-            <h4 class="h4 flex-align mb-0"> Owner List </h4>
+            <h4 class="h4 flex-align"> Owner List </h4>
+            <div class="icon-detail">
+              <i class="icon-warning fa-solid fa-triangle-exclamation"></i> <span
+                class="text-gray-500 fw-medium text-13">
+                หมายเหตุ: เครื่องหมายแจ้งเตือนสถานะของรายการถูกปิดการเผยแพร่</span>
+            </div>
           </div>
 
           <div class="card-body p-8 table-responsive">
@@ -278,8 +285,9 @@
                   <th width="150">E Number</th>
                   <th width="150">H Number</th>
                   <th>Additive Name</th>
-                  <th>Guarantee by</th>
+                  <th>Certification Body</th>
                   <th width="150">Country</th>
+                  <th>User view</th>
                   <th width="150">Actions</th>
                 </tr>
               </thead>
@@ -288,9 +296,12 @@
                   <td>E 123456</td>
                   <td>H 123456</td>
                   <td>Sample Additive Name</td>
-                  <td>Sample Guarantee</td>
+                  <td>Sample Guarantee<i class="icon-warning fa-solid fa-triangle-exclamation"></i></td>
                   <td>Thailand</td>
-                  <td>
+ <td>
+                  <span class="h4e-inactive"><i class="fa-solid fa-eye-slash"></i></span>
+
+                  </td>                  <td>
 
                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
 
@@ -302,6 +313,8 @@
                   <td>Another Additive Name</td>
                   <td>Another Guarantee</td>
                   <td>USA</td>
+                 <td> <span class="h4e-active"><i class="fa-solid fa-eye"></i></span>
+                  </td>
                   <td>
                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
 
@@ -313,6 +326,8 @@
                   <td>Third Additive Name</td>
                   <td>Third Guarantee</td>
                   <td>Germany</td>
+                  <td> <span class="h4e-active"><i class="fa-solid fa-eye"></i></span>
+                  </td>
                   <td>
                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
 
@@ -322,8 +337,12 @@
                   <td>E 345678</td>
                   <td>H 345678</td>
                   <td>Fourth Additive Name</td>
-                  <td>Fourth Guarantee</td>
+                  <td>Fourth Guarantee<i class="icon-warning fa-solid fa-triangle-exclamation"></i></td>
                   <td>Japan</td>
+                  <td>
+                  <span class="h4e-inactive"><i class="fa-solid fa-eye-slash"></i></span>
+
+                  </td>
                   <td>
                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
 
@@ -377,7 +396,7 @@
       info: false,   // Bottom Left Text => Showing 1 to 10 of 12 entries
       paging: false,
       "columnDefs": [
-        { "orderable": false, "targets": [5] } // Disables sorting on the 7th column (index 6)
+        { "orderable": false, "targets": [6] } // Disables sorting on the 7th column (index 6)
       ]
     });
   </script>

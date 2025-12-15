@@ -9885,6 +9885,15 @@ span.h4e-inactive {
      width: 100px;
     text-align: center;
 }
+i.icon-active {
+    color: var(--success-600);
+
+}
+i.icon-warning {
+    color: var(--warning-600);
+
+}
+
 /* end of form style */
 
 
