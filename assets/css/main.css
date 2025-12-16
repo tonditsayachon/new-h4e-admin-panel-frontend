@@ -9893,7 +9893,14 @@ i.icon-warning {
     color: var(--warning-600);
 
 }
-
+.user-disabled i{
+    color: var(--danger-600) !important;
+    font-size: 20px;
+}
+.user-view i{
+    color: var(--success-600) !important;
+ yfont-size: 20px;
+}
 /* end of form style */
 
 
@@ -10175,6 +10182,10 @@ color:#198754;
   overflow-x: auto;         
   outline: none;           
   box-shadow: inset 0 2px 5px rgba(0,0,0,0.5); 
+}
+.icon-detail{
+    display: flex;
+    gap: 20px;
 }
 @media screen and (max-width: 767px) {
     form.h-number-filter .row{

@@ -73,7 +73,7 @@
                     <li class="sidebar-menu__item">
                         <a href="guarantee.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-file-shield"></i></span>
-                            <span class="text">Guarantee</span>
+                            <span class="text">Certification Body</span>
                         </a>
                     </li>
 
@@ -106,7 +106,12 @@
                             <span class="text">Manage User</span>
                         </a>
                     </li>
-
+                    <li class="sidebar-menu__item">
+                        <a href="activity-log.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-database"></i></span>
+                            <span class="text">Activity Log</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
@@ -190,7 +195,7 @@
                 <!-- Breadcrumb End -->
             </div>
             <h3>Manage Users</h3>
-            
+
             <div class="search-filter my-20">
 
                 <form action="" class="h-number-filter gap-8">
@@ -251,10 +256,11 @@
                             <tr>
 
 
-                                <th>Name</th>
-                                <th>Email</th>
+                                <th>user name</th>
+                                <th width="200">Email</th>
                                 <th width="150">Role</th>
-                                <th width="150">Status</th>
+                                <th width="200">User Type</th>
+                                <th class="text-center" width="150">Status</th>
                                 <th width="150">Actions</th>
                             </tr>
                         </thead>
@@ -263,7 +269,7 @@
 
 
                                 <td>
-                                    <span>My name is Brian</span>
+                                    <span>user_name</span>
                                 </td>
                                 <td>
 
@@ -272,9 +278,18 @@
                                 </td>
 
                                 <td>
-                                    employee
+                                    subscriber
                                 </td>
+                                <!-- user Type -->
+                                <!-- Consumer
+                                Academic / Researcher
+                                Industry
+                                Regulator
+                                Other -->
                                 <td>
+                                    <span>Industry</span>
+                                </td>
+                                <td class="text-center">
                                     <span class="h4e-inactive">Inactive</span>
 
                                 </td>
@@ -294,7 +309,42 @@
 
 
                                 <td>
-                                    <span>John Cena</span>
+                                    <span>who_ru</span>
+                                </td>
+                                <td>
+
+
+                                    <span>whru@work.com</span>
+                                </td>
+
+                                <td>
+                                    subscriber
+                                </td>
+                                <td>
+                                    <span>Academic / Researcher</span>
+                                </td>
+                                <td class="text-center">
+                                    <span class="h4e-active">Active</span>
+
+                                </td>
+                                <td>
+                                    <div class="flex-align gap-8">
+                                        <a href="view-user.html"><i class="actions view fa-solid fa-eye"></i></a>
+                                        <a href="edit-user.html"><i
+                                                class="actions edit fa-solid fa-pen-to-square"></i></a>
+
+                                        <button type="submit"><i
+                                                class="actions disDelete fa-solid fa-trash-can"></i></button>
+                                    </div>
+
+                                </td>
+                            </tr>
+
+                            <tr>
+
+
+                                <td>
+                                    <span>john_cena</span>
                                 </td>
                                 <td>
 
@@ -303,9 +353,12 @@
                                 </td>
 
                                 <td>
-                                    employee
+                                    subscriber
                                 </td>
                                 <td>
+                                    <span>Regulator</span>
+                                </td>
+                                <td class="text-center">
                                     <span class="h4e-active">Active</span>
 
                                 </td>
@@ -501,7 +554,7 @@
             info: false,   // Bottom Left Text => Showing 1 to 10 of 12 entries
             paging: false,
             "columnDefs": [
-                { "orderable": false, "targets": [4] } // Disables sorting on the 7th column (index 6)
+                { "orderable": false, "targets": [5] } // Disables sorting on the 7th column (index 6)
             ]
         });
     </script>

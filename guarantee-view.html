@@ -76,7 +76,7 @@
                     <li class="sidebar-menu__item activePage">
                         <a href="guarantee.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-file-shield"></i></span>
-                            <span class="text">Guarantee</span>
+                            <span class="text">Certification Body</span>
                         </a>
                     </li>
                     <li class=" border-top border-gray-100 mb-8">
@@ -106,6 +106,12 @@
                         <a href="manage-users.html" class="sidebar-menu__link">
                             <span class="icon"><i class="fa-solid fa-users"></i></span>
                             <span class="text">Manage User</span>
+                        </a>
+                    </li>
+                    <li class="sidebar-menu__item">
+                        <a href="activity-log.html" class="sidebar-menu__link">
+                            <span class="icon"><i class="fa-solid fa-database"></i></span>
+                            <span class="text">Activity Log</span>
                         </a>
                     </li>
 
@@ -262,6 +268,23 @@
             <div class="card mt-24 overflow-hidden">
                 <div class="card-header">
                     <h4 class="h4 flex-align"> Additive List </h4>
+                    <div class="icon-detail">
+                        <div class="icon-item">
+                            <i class="icon-warning fa-solid fa-triangle-exclamation"></i> <span
+                                class="text-gray-500 fw-medium text-13">
+                                หมายเหตุ: เครื่องหมายแจ้งเตือนสถานะของรายการถูกปิดการเผยแพร่</span>
+                        </div>
+                        <div class="icon-item">
+                            <span class="user-view"><i class="fa-solid fa-check"></i></span>
+
+                            <span class="text-gray-500 fw-medium text-13"> หมายเหตุ: กำลังแสดงผลบนหน้าเว็บไซต์</span>
+                        </div>
+                        <div class="icon-item">
+                            <span class="user-disabled"><i class="fa-solid fa-circle-xmark"></i></span>
+                            <span class="text-gray-500 fw-medium text-13">
+                                หมายเหตุ: ไม่แสดงผลบนหน้าเว็บไซต์</span>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="card-body p-8 table-responsive">
@@ -275,6 +298,7 @@
                                 <th>Additive Name</th>
                                 <th class="text-center" width="150">Status</th>
                                 <th width="150" class="text-center">Distributors</th>
+                                <th width="150" class="text-center">User view</th>
                                 <th class="text-center">Actions</th>
                             </tr>
                         </thead>
@@ -282,17 +306,21 @@
                             <tr>
                                 <td>E 123456</td>
                                 <td>H 123456</td>
-                                <td>Sample Additive Name</td>
+                                <td>Sample Additive Name<i class="icon-warning fa-solid fa-triangle-exclamation"></i>
+                                </td>
                                 <td class="text-center">
                                     <i class="fa-solid fa-certificate halal-status cert"></i>
                                 </td>
                                 <td class="text-center">2</td>
-
+                                <td class="text-center">
+                                    <span class="user-disabled"><i class="fa-solid fa-circle-xmark"></i></span>
+                                </td>
                                 <td class="text-center">
 
                                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
 
                                 </td>
+
                             </tr>
                             <tr>
                                 <td>E 654321</td>
@@ -302,11 +330,14 @@
                                     <i class="fa-solid fa-leaf halal-status fatwa"></i>
                                 </td>
                                 <td class="text-center">1</td>
-
+                                <td class="text-center">
+                                    <span class="user-view"><i class="fa-solid fa-check"></i></span>
+                                </td>
                                 <td class="text-center">
                                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
 
                                 </td>
+
                             </tr>
                             <tr>
                                 <td>E 789012</td>
@@ -316,25 +347,32 @@
                                     <i class="fa-solid fa-circle-question halal-status unidentify"></i>
                                 </td>
                                 <td class="text-center">4</td>
-
+                                <td class="text-center">
+                                    <span class="user-view"><i class="fa-solid fa-check"></i></span>
+                                </td>
                                 <td class="text-center">
                                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
 
                                 </td>
+
                             </tr>
                             <tr>
                                 <td>E 345678</td>
                                 <td>H 345678</td>
-                                <td>Fourth Additive Name</td>
+                                <td>Fourth Additive Name <i class="icon-warning fa-solid fa-triangle-exclamation"></i>
+                                </td>
                                 <td class="text-center">
                                     <i class="fa-solid fa-triangle-exclamation halal-status mushbooh"></i>
                                 </td>
                                 <td class="text-center">2</td>
-
+                                <td class="text-center">
+                                    <span class="user-disabled"><i class="fa-solid fa-circle-xmark"></i></span>
+                                </td>
                                 <td class="text-center">
                                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
 
                                 </td>
+
                             </tr>
                         </tbody>
                     </table>
@@ -380,7 +418,7 @@
             info: false,   // Bottom Left Text => Showing 1 to 10 of 12 entries
             paging: false,
             "columnDefs": [
-                { "orderable": false, "targets": [5] } // Disables sorting on the 7th column (index 6)
+                { "orderable": false, "targets": [6] } // Disables sorting on the 7th column (index 6)
             ]
 
 

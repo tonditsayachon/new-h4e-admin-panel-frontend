@@ -103,6 +103,12 @@
               <span class="text">Manage User</span>
             </a>
           </li>
+          <li class="sidebar-menu__item">
+            <a href="activity-log.html" class="sidebar-menu__link">
+              <span class="icon"><i class="fa-solid fa-database"></i></span>
+              <span class="text">Activity Log</span>
+            </a>
+          </li>
         </ul>
       </div>
 
@@ -268,12 +274,26 @@
         </div>
         <div class="card mt-24 overflow-hidden">
           <div class="card-header">
-            <h4 class="h4 flex-align"> Owner List </h4>
+            <h4 class="h4"> Owner List </h4>
             <div class="icon-detail">
-              <i class="icon-warning fa-solid fa-triangle-exclamation"></i> <span
-                class="text-gray-500 fw-medium text-13">
-                หมายเหตุ: เครื่องหมายแจ้งเตือนสถานะของรายการถูกปิดการเผยแพร่</span>
+              <div class="icon-item">
+                <i class="icon-warning fa-solid fa-triangle-exclamation"></i> <span
+                  class="text-gray-500 fw-medium text-13">
+                  หมายเหตุ: เครื่องหมายแจ้งเตือนสถานะของรายการถูกปิดการเผยแพร่</span>
+              </div>
+              <div class="icon-item">
+             <span class="user-view"><i class="fa-solid fa-check"></i></span>
+
+                    <span class="text-gray-500 fw-medium text-13"> หมายเหตุ: กำลังแสดงผลบนหน้าเว็บไซต์</span>
+              </div>
+              <div class="icon-item">
+                <span class="user-disabled"><i class="fa-solid fa-circle-xmark"></i></span>
+                <span
+                  class="text-gray-500 fw-medium text-13">
+                  หมายเหตุ: ไม่แสดงผลบนหน้าเว็บไซต์</span>
+              </div>
             </div>
+
           </div>
 
           <div class="card-body p-8 table-responsive">
@@ -287,7 +307,7 @@
                   <th>Additive Name</th>
                   <th>Certification Body</th>
                   <th width="150">Country</th>
-                  <th>User view</th>
+                  <th class="text-center" width="150">User view</th>
                   <th width="150">Actions</th>
                 </tr>
               </thead>
@@ -295,13 +315,14 @@
                 <tr>
                   <td>E 123456</td>
                   <td>H 123456</td>
-                  <td>Sample Additive Name</td>
+                  <td>Sample Additive Name<i class="icon-warning fa-solid fa-triangle-exclamation"></i></td>
                   <td>Sample Guarantee<i class="icon-warning fa-solid fa-triangle-exclamation"></i></td>
                   <td>Thailand</td>
- <td>
-                  <span class="h4e-inactive"><i class="fa-solid fa-eye-slash"></i></span>
+                  <td class="text-center">
+                    <span class="user-disabled"><i class="fa-solid fa-circle-xmark"></i></span>
 
-                  </td>                  <td>
+                  </td>
+                  <td>
 
                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
 
@@ -313,7 +334,7 @@
                   <td>Another Additive Name</td>
                   <td>Another Guarantee</td>
                   <td>USA</td>
-                 <td> <span class="h4e-active"><i class="fa-solid fa-eye"></i></span>
+                  <td class="text-center"> <span class="user-view"><i class="fa-solid fa-check"></i></span>
                   </td>
                   <td>
                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
@@ -326,7 +347,7 @@
                   <td>Third Additive Name</td>
                   <td>Third Guarantee</td>
                   <td>Germany</td>
-                  <td> <span class="h4e-active"><i class="fa-solid fa-eye"></i></span>
+                  <td class="text-center"> <span class="user-view"><i class="fa-solid fa-check"></i></span>
                   </td>
                   <td>
                     <a href="h-number-distr.html"><i class="actions view fa-solid fa-eye"></i></a>
@@ -336,11 +357,11 @@
                 <tr>
                   <td>E 345678</td>
                   <td>H 345678</td>
-                  <td>Fourth Additive Name</td>
+                  <td>Fourth Additive Name<i class="icon-warning fa-solid fa-triangle-exclamation"></i></td>
                   <td>Fourth Guarantee<i class="icon-warning fa-solid fa-triangle-exclamation"></i></td>
                   <td>Japan</td>
-                  <td>
-                  <span class="h4e-inactive"><i class="fa-solid fa-eye-slash"></i></span>
+                  <td class="text-center">
+                    <span class="user-disabled"><i class="fa-solid fa-circle-xmark"></i></span>
 
                   </td>
                   <td>
